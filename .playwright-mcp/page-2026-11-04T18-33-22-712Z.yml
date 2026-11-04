@@ -1,0 +1,329 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - button "Rehearse" [ref=e5] [cursor=pointer]
+    - generic [ref=e6]:
+      - link "How it works" [ref=e7] [cursor=pointer]:
+        - /url: "#how"
+      - button "Practice" [ref=e8] [cursor=pointer]
+      - link "Roles" [ref=e9] [cursor=pointer]:
+        - /url: "#roles"
+      - button "Dashboard" [ref=e10] [cursor=pointer]
+      - button "Start free" [ref=e11] [cursor=pointer]
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - img "Rehearse candidate and AI interviewer in retro mid-century modern office"
+      - generic [ref=e20]:
+        - generic [ref=e21]: Interactive AI Interview Practice
+        - heading [level=1] [ref=e24]:
+          - text: Interview like you’ve
+          - emphasis [ref=e25]: done it before.
+        - paragraph [ref=e26]: Rehearse is an AI interviewer that asks real questions,listens to your answers, and tells you exactly what to fix before the actual day.
+        - generic [ref=e27]:
+          - button "Start a mock interview" [ref=e28]
+          - link "See how it works" [ref=e35] [cursor=pointer]:
+            - /url: "#how"
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: ★
+            - text: 4.9/5 satisfaction rate
+          - generic [ref=e39]: •
+          - generic [ref=e40]: Adaptive follow-ups
+          - generic [ref=e41]: •
+          - generic [ref=e42]: Instant STAR feedback
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e45]: HOW IT WORKS
+        - heading [level=2] [ref=e48]:
+          - text: Practice built for the interview,
+          - emphasis [ref=e49]: not the quiz.
+        - paragraph [ref=e50]: Unlike static question banks, Rehearse gives you a real, conversational interview experience.
+      - generic [ref=e52]:
+        - img "Thoughtful candidate seated at vintage desk reflecting on interview preparation" [ref=e55]
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - generic [ref=e66]: "01"
+              - generic [ref=e68]:
+                - heading "Real interview questions" [level=3] [ref=e69]
+                - paragraph [ref=e70]: Get role-specific, up-to-date questions that reflect actual industry interviews.
+            - generic [ref=e74]:
+              - generic [ref=e81]: "02"
+              - generic [ref=e83]:
+                - heading "A natural conversation" [level=3] [ref=e84]
+                - paragraph [ref=e85]: Talk to an AI interviewer that listens, asks follow-ups, and adapts to your responses.
+            - generic [ref=e89]:
+              - generic [ref=e97]: "03"
+              - generic [ref=e99]:
+                - heading "Actionable feedback" [level=3] [ref=e100]
+                - paragraph [ref=e101]: Get clear, structured feedback with strengths, gaps, and practical ways to improve.
+          - paragraph [ref=e119]: A real interview experience, from question to feedback.
+    - generic [ref=e122]:
+      - generic [ref=e123]:
+        - generic [ref=e124]:
+          - text: Live Practice Mode
+          - heading "Your first mock round" [level=2] [ref=e125]
+        - button "Try interactive demo" [ref=e126]
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - generic [ref=e133]:
+            - img "Candidate interacting with robot interviewer across mahogany desk" [ref=e134]
+            - generic [ref=e135]: "Phase 1: AI Question"
+            - button "Toggle audio playback" [ref=e139]
+          - generic [ref=e153]:
+            - generic [ref=e154]:
+              - generic [ref=e155]: Rehearse AI Interviewer
+              - generic [ref=e156]: "Target: Critical thinking & accountability"
+            - paragraph [ref=e157]: “Can you walk me through a time when a technical decision you championed caused an unexpected regression? How did you triage it?”
+            - generic [ref=e158]:
+              - generic [ref=e159]:
+                - button "AI Question" [ref=e160]
+                - button "Candidate Answer" [ref=e161]
+                - button "Live AI Debrief" [ref=e162]
+              - button "Next" [ref=e163]
+        - generic [ref=e170]:
+          - heading "Sit across from a patient interviewer" [level=3] [ref=e171]
+          - paragraph [ref=e172]: Choose a role and target seniority. Answer using voice or text, experience real-time follow-ups that challenge vague assertions, and conclude each round with an actionable written debrief.
+          - list [ref=e173]:
+            - listitem [ref=e174]:
+              - generic [ref=e178]:
+                - strong [ref=e179]: Tailored questions
+                - text: extracted from your actual projects and targeted job requirements.
+            - listitem [ref=e180]:
+              - generic [ref=e184]:
+                - strong [ref=e185]: Adaptive follow-ups
+                - text: that naturally probe vague metrics and hand-waving claims.
+            - listitem [ref=e186]:
+              - generic [ref=e190]:
+                - strong [ref=e191]: Progress trajectory
+                - text: tracking your composure, clarity, and depth over every session.
+          - button "Begin a session" [ref=e193]
+    - generic [ref=e198]:
+      - text: Holistic Evaluation
+      - heading "Designed around how interviews actually go" [level=2] [ref=e199]
+      - paragraph [ref=e200]: Every question evaluates both technical substance and conversational conviction.
+      - generic [ref=e201]:
+        - generic [ref=e202] [cursor=pointer]:
+          - generic [ref=e203]:
+            - generic [ref=e204]:
+              - img "Candidate exploring technical problem with algorithmic schematic" [ref=e205]
+              - generic [ref=e206]: Technical Depth
+            - generic [ref=e207]:
+              - heading "Questions with depth" [level=3] [ref=e208]
+              - paragraph [ref=e209]: Distributed system architecture, data structure trade-offs, and project deep-dives that adapt to your target seniority.
+          - generic [ref=e210]: Click to explore details
+        - generic [ref=e214] [cursor=pointer]:
+          - generic [ref=e215]:
+            - generic [ref=e216]:
+              - img "Candidate articulating structured behavioral response with calm conviction" [ref=e217]
+              - generic [ref=e218]: Behavioural (STAR)
+            - generic [ref=e219]:
+              - heading "Stories that land" [level=3] [ref=e220]
+              - paragraph [ref=e221]: Master the STAR method so the tangible outcome—not the backstory—is what interviewers remember.
+          - generic [ref=e222]: Click to explore details
+        - generic [ref=e226] [cursor=pointer]:
+          - generic [ref=e227]:
+            - generic [ref=e228]:
+              - img "Line-by-line editorial debrief report analyzing clarity and sentence impact" [ref=e229]
+              - generic [ref=e230]: Actionable Feedback
+            - generic [ref=e231]:
+              - heading "A debrief, not a grade" [level=3] [ref=e232]
+              - paragraph [ref=e233]: See what to change in each answer, ranked by how much it moves your score with actionable rewrites.
+          - generic [ref=e234]: Click to explore details
+      - link "Explore supported role tracks" [ref=e239] [cursor=pointer]:
+        - /url: "#roles"
+    - generic [ref=e242]:
+      - generic [ref=e243]:
+        - text: Coverage & Verticals
+        - heading "One interviewer, every kind of role" [level=2] [ref=e244]
+        - paragraph [ref=e245]: Whether you are preparing for FAANG system design, consulting case interviews, or your very first internship, Rehearse calibrates its expectations to your exact level.
+        - generic [ref=e247]:
+          - generic [ref=e248]:
+            - img "Software systems architecture and code analysis illustration" [ref=e249]
+            - generic [ref=e250]: Software engineering Track
+          - paragraph [ref=e251]: Quick Simulation
+          - paragraph [ref=e252]: Experience realistic pushback calibrated for this role.
+          - button "Launch Software engineering round" [ref=e253] [cursor=pointer]
+      - generic [ref=e258]:
+        - generic [ref=e259] [cursor=pointer]:
+          - generic [ref=e260]:
+            - generic [ref=e261]:
+              - img "Software engineering" [ref=e263]
+              - generic [ref=e264]:
+                - heading "Software engineering" [level=3] [ref=e265]
+                - paragraph [ref=e266]: Algorithms, distributed system design & project walkthroughs
+            - generic [ref=e267]: Active
+          - paragraph [ref=e268]: Tailored for campus grads, mid-level SWEs, and Staff/Principal architects. Covers algorithmic optimization, microservice tradeoffs, concurrency, and DB scalability.
+          - generic [ref=e269]:
+            - generic [ref=e270]:
+              - paragraph [ref=e271]: "Sample Probing Question:"
+              - paragraph [ref=e272]: “Design a globally distributed rate-limiter that maintains sub-5ms latency and handles network partitions between EU and US clusters.”
+            - generic [ref=e273]:
+              - generic [ref=e274]:
+                - generic [ref=e275]: System Design
+                - generic [ref=e276]: Distributed Caching
+                - generic [ref=e277]: API Idempotency
+                - generic [ref=e278]: Database Sharding
+              - button "Practice this track →" [ref=e279]
+        - generic [ref=e280] [cursor=pointer]:
+          - generic [ref=e281]:
+            - generic [ref=e282]:
+              - img "Data & analytics" [ref=e284]
+              - generic [ref=e285]:
+                - heading "Data & analytics" [level=3] [ref=e286]
+                - paragraph [ref=e287]: SQL, business metrics & root-cause case analysis
+            - generic [ref=e288]: Select
+          - paragraph [ref=e289]: Tests how you reason under business uncertainty rather than memorizing formulaic queries. Formulate hypotheses, debug data anomalies, and present findings to leadership.
+        - generic [ref=e290] [cursor=pointer]:
+          - generic [ref=e291]:
+            - generic [ref=e292]:
+              - img "HR & managerial rounds" [ref=e294]
+              - generic [ref=e295]:
+                - heading "HR & managerial rounds" [level=3] [ref=e296]
+                - paragraph [ref=e297]: Executive presence, stakeholder conflict & leadership pushback
+            - generic [ref=e298]: Select
+          - paragraph [ref=e299]: ‘Tell me about yourself’, difficult colleague relationships, prioritization crises, and high-stakes executive alignment with unscripted pushback.
+        - generic [ref=e300] [cursor=pointer]:
+          - generic [ref=e301]:
+            - generic [ref=e302]:
+              - img "Internships & freshers" [ref=e304]
+              - generic [ref=e305]:
+                - heading "Internships & freshers" [level=3] [ref=e306]
+                - paragraph [ref=e307]: Clear foundational reasoning & academic project articulation
+            - generic [ref=e308]: Select
+          - paragraph [ref=e309]: Entry-level mock rounds that reward fundamental problem-solving, intellectual curiosity, and concise project explanations when you have limited corporate experience.
+    - generic [ref=e311]:
+      - heading "What you can expect" [level=2] [ref=e312]
+      - generic [ref=e314]:
+        - img "Robot interviewer probing candidate vague metric" [ref=e316]
+        - generic [ref=e317]:
+          - generic [ref=e318]:
+            - generic [ref=e319]:
+              - generic [ref=e320]: Vague Metric Pushback
+              - generic [ref=e324]: 1 of 4
+            - paragraph [ref=e325]: “You said you improved performance. By how much, and how did you measure it?”
+            - paragraph [ref=e326]:
+              - strong [ref=e327]: "Interviewer rationale:"
+              - text: Triggered when candidate mentions 'making things faster' without p95/p99 latency benchmarks or resource metrics.
+          - generic [ref=e328]:
+            - generic [ref=e329]: Unscripted Pushback
+            - generic [ref=e333]:
+              - button "Previous question" [ref=e334]
+              - button "Next question" [ref=e337]
+    - generic [ref=e341]:
+      - generic [ref=e342]:
+        - generic [ref=e343]:
+          - text: Essays & Field Notes
+          - heading "The Rehearse notebook" [level=2] [ref=e344]
+        - paragraph [ref=e345]: Practical strategies written by former hiring managers and interview calibration leads.
+      - generic [ref=e346]:
+        - article [ref=e347] [cursor=pointer]:
+          - generic [ref=e348]:
+            - generic [ref=e349]:
+              - img "Open study notebook with technical diagram and fountain pen" [ref=e350]
+              - generic [ref=e351]: Guide
+            - generic [ref=e352]:
+              - text: Guide
+              - heading "Turning a project into a two-minute story" [level=3] [ref=e353]
+              - paragraph [ref=e354]: Why 80% of candidates lose interviewers in the setup phase, and how to frontload the engineering tension and outcome.
+          - generic [ref=e355]:
+            - generic [ref=e356]: 8 min read
+            - generic [ref=e360]: Read guide
+        - article [ref=e363] [cursor=pointer]:
+          - generic [ref=e364]:
+            - generic [ref=e365]:
+              - img "Candidate reviewing technical blueprint and architectural checklist" [ref=e366]
+              - generic [ref=e367]: Playbook
+            - generic [ref=e368]:
+              - text: Playbook
+              - heading "The first five minutes of any technical round" [level=3] [ref=e369]
+              - paragraph [ref=e370]: The subtle signaling that happens before you write a single line of code or touch the virtual whiteboard.
+          - generic [ref=e371]:
+            - generic [ref=e372]: 6 min read
+            - generic [ref=e376]: Read guide
+        - article [ref=e379] [cursor=pointer]:
+          - generic [ref=e380]:
+            - generic [ref=e381]:
+              - img "Vintage study lamp illuminating reference volumes and audio headphones" [ref=e382]
+              - generic [ref=e383]: Essay
+            - generic [ref=e384]:
+              - text: Essay
+              - heading "Why confidence is mostly repetition" [level=3] [ref=e385]
+              - paragraph [ref=e386]: Nervousness in interviews isn't a personality flaw—it's unfamiliarity with hearing your own voice under interrogation.
+          - generic [ref=e387]:
+            - generic [ref=e388]: 5 min read
+            - generic [ref=e392]: Read guide
+    - generic [ref=e395]:
+      - generic [ref=e396]:
+        - img "Climbing the mountain career summit" [ref=e397]
+        - generic [ref=e398]: Goal Attainment
+      - generic [ref=e399]:
+        - img "Retro mid-century rocket launch to interview success" [ref=e400]
+        - generic [ref=e401]: Career Trajectory
+      - generic [ref=e402]:
+        - generic [ref=e403]: Immediate Access
+        - heading "Walk into your next interview already warmed up" [level=2] [ref=e404]
+        - paragraph [ref=e405]: Join 12,000+ candidates who replaced pre-interview anxiety with articulate, calibrated composure.
+        - generic [ref=e406]:
+          - textbox "Enter your email address" [ref=e407]
+          - button "Get access" [ref=e408]
+        - generic [ref=e412]:
+          - generic [ref=e413]: Free 2 mock sessions included
+          - generic [ref=e414]: •
+          - generic [ref=e415]: No credit card required
+    - generic [ref=e417]:
+      - generic [ref=e418]:
+        - generic [ref=e419]:
+          - heading "Product" [level=4] [ref=e420]
+          - list [ref=e421]:
+            - listitem [ref=e422]:
+              - link "How it works" [ref=e423] [cursor=pointer]:
+                - /url: "#how"
+            - listitem [ref=e424]:
+              - link "Live Mock Practice" [ref=e425] [cursor=pointer]:
+                - /url: "#practice"
+            - listitem [ref=e426]:
+              - link "Supported Roles" [ref=e427] [cursor=pointer]:
+                - /url: "#roles"
+            - listitem [ref=e428]:
+              - link "Interactive Evaluation" [ref=e429] [cursor=pointer]:
+                - /url: "#start"
+        - generic [ref=e430]:
+          - heading "Resources" [level=4] [ref=e431]
+          - list [ref=e432]:
+            - listitem [ref=e433]:
+              - link "The Rehearse Notebook" [ref=e434] [cursor=pointer]:
+                - /url: "#learn"
+            - listitem [ref=e435]:
+              - link "STAR Framework Guides" [ref=e436] [cursor=pointer]:
+                - /url: "#learn"
+            - listitem [ref=e437]:
+              - link "System Design Calibration" [ref=e438] [cursor=pointer]:
+                - /url: "#learn"
+            - listitem [ref=e439]:
+              - link "Engineering Benchmarks" [ref=e440] [cursor=pointer]:
+                - /url: "#learn"
+        - generic [ref=e441]:
+          - heading "Company" [level=4] [ref=e442]
+          - list [ref=e443]:
+            - listitem [ref=e444]:
+              - link "About Rehearse" [ref=e445] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e446]:
+              - link "Privacy Policy" [ref=e447] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e448]:
+              - link "Terms of Service" [ref=e449] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e450]:
+              - link "Security Architecture" [ref=e451] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e452]:
+          - heading "Contact & Support" [level=4] [ref=e453]
+          - paragraph [ref=e454]: Have questions or need enterprise mock round calibrations for your team?
+          - link "hello@rehearse.app" [ref=e455] [cursor=pointer]:
+            - /url: mailto:hello@rehearse.app
+      - generic [aria-hidden] [ref=e457]: Rehearse
+      - generic [ref=e458]:
+        - paragraph [ref=e459]: © 2026 Rehearse Labs, Inc. All rights reserved.
+        - paragraph [ref=e460]: Hand-crafted for candidates who value clear, calm speech.

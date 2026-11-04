@@ -1,0 +1,50 @@
+- main [ref=f2e3]:
+  - generic [ref=f2e5]:
+    - button "Aevora Homepage" [ref=f2e6] [cursor=pointer]:
+      - generic [ref=f2e12]: Aevora
+    - navigation "Main Navigation" [ref=f2e13]:
+      - button "Discover" [ref=f2e14] [cursor=pointer]
+      - button "Date Ideas" [ref=f2e15] [cursor=pointer]
+      - button "Places" [ref=f2e16] [cursor=pointer]
+      - button "Stories" [ref=f2e17] [cursor=pointer]
+    - button "Our Space" [ref=f2e19] [cursor=pointer]
+  - generic [ref=f2e24]:
+    - generic:
+      - img "Original Earth horizon sunrise with couple standing on cliff"
+    - generic [ref=f2e25]:
+      - generic [ref=f2e27]:
+        - generic [ref=f2e28]: A SPACE FOR TWO
+        - heading "Explore, plan, and collect moments together." [level=1] [ref=f2e29]: Explore, plan, andcollect moments together.
+        - paragraph [ref=f2e30]: Discover date ideas, beautiful places, and experiences made for two.
+        - generic [ref=f2e31]:
+          - button "Start Exploring" [ref=f2e32] [cursor=pointer]
+          - button "Watch the Story" [active] [ref=f2e36] [cursor=pointer]
+      - generic [ref=f2e42]:
+        - button "Curated Date Ideas" [ref=f2e43] [cursor=pointer]
+        - button "Places to Explore" [ref=f2e48] [cursor=pointer]
+        - button "Real Couple Stories" [ref=f2e52] [cursor=pointer]
+        - button "A Shared Space" [ref=f2e56] [cursor=pointer]
+  - button "Toggle ambient atmospheric audio" [ref=f2e61] [cursor=pointer]:
+    - generic [ref=f2e66]: Atmosphere
+  - generic [ref=f2e481]:
+    - generic [ref=f2e482]:
+      - generic [ref=f2e483]:
+        - generic [ref=f2e484]: Cinematic Prelude
+        - generic [ref=f2e488]: •
+        - generic [ref=f2e489]: The Philosophy of Aevora
+      - generic [ref=f2e490]:
+        - button "Toggle ambient audio" [ref=f2e491] [cursor=pointer]
+        - button "Close story" [ref=f2e496] [cursor=pointer]
+    - generic [ref=f2e500]:
+      - img "Cinematic background" [ref=f2e502]
+      - generic [ref=f2e505]:
+        - generic [ref=f2e506]: Act I • The Orbit
+        - heading "\"In a cosmos of eight billion souls\"" [level=3] [ref=f2e507]
+        - paragraph [ref=f2e508]: We spend our lives navigating vast, solitary spaces. Until one day, someone looks at the same horizon and chooses to stand beside you.
+      - generic [ref=f2e509]:
+        - button "Go to slide 1" [ref=f2e510] [cursor=pointer]
+        - button "Go to slide 2" [ref=f2e511] [cursor=pointer]
+        - button "Go to slide 3" [ref=f2e512] [cursor=pointer]
+    - generic [ref=f2e513]:
+      - button "Pause Experience" [ref=f2e514] [cursor=pointer]
+      - generic [ref=f2e519]: "Atmospheric Audio: Cosmic Dawn (432Hz)"

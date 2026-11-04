@@ -1,0 +1,27 @@
+- main [ref=f1e3]:
+  - generic [ref=f1e4]:
+    - button "Aevora Homepage" [ref=f1e5] [cursor=pointer]:
+      - generic [ref=f1e11]: Aevora
+    - navigation "Main Navigation" [ref=f1e12]:
+      - button "Discover" [ref=f1e13] [cursor=pointer]
+      - button "Date Ideas" [ref=f1e14] [cursor=pointer]
+      - button "Places" [ref=f1e15] [cursor=pointer]
+      - button "Stories" [ref=f1e16] [cursor=pointer]
+    - button "Our Space" [ref=f1e18] [cursor=pointer]
+  - generic [ref=f1e23]:
+    - img "Earth horizon sunrise with couple standing on cliff" [ref=f1e25]
+    - generic [ref=f1e26]:
+      - generic [ref=f1e27]:
+        - generic [ref=f1e28]: A SPACE FOR TWO
+        - heading "Explore, plan, and collect moments together." [level=1] [ref=f1e29]: Explore, plan, andcollect moments together.
+        - paragraph [ref=f1e30]: Discover date ideas, beautiful places, and experiences made for two.
+        - generic [ref=f1e31]:
+          - button "Start Exploring" [ref=f1e32] [cursor=pointer]
+          - button "Watch the Story" [ref=f1e36] [cursor=pointer]
+      - generic [ref=f1e42]:
+        - button "Curated Date Ideas" [ref=f1e43] [cursor=pointer]
+        - button "Places to Explore" [ref=f1e48] [cursor=pointer]
+        - button "Real Couple Stories" [ref=f1e53] [cursor=pointer]
+        - button "A Shared Space" [ref=f1e57] [cursor=pointer]
+  - button "Toggle ambient atmospheric audio" [ref=f1e62] [cursor=pointer]:
+    - generic [ref=f1e67]: Atmosphere
