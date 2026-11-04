@@ -34,7 +34,7 @@ export const Hero: React.FC<HeroProps> = ({
         />
 
         {/* 
-          Refined Atmospheric Gradient Overlays:
+          Atmospheric Gradient Overlays:
           Preserves the brilliant glowing orange sunrise on the left,
           the warm golden clouds, the starry sky, and the couple on the right,
           while ensuring the left-side text has crystal-clear readability.
@@ -66,7 +66,7 @@ export const Hero: React.FC<HeroProps> = ({
         <div className="hidden sm:block h-1" />
 
         {/* Left Hero Content */}
-        <div className="max-w-[560px] my-auto pt-2 sm:pt-4">
+        <div className="max-w-[580px] my-auto pt-2 sm:pt-4">
           {/* Eyebrow: A SPACE FOR TWO */}
           <div className="mb-3.5 sm:mb-4">
             <span className="text-[11px] sm:text-[11.5px] font-sans font-medium uppercase tracking-[0.24em] text-[#BAA898]">
@@ -75,17 +75,17 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
 
           {/* Heading: Explore, plan, and / collect moments together. */}
-          <h1 className="text-[30px] sm:text-[38px] md:text-[43px] lg:text-[45px] font-sans font-normal text-[#F5E5D2] leading-[1.18] tracking-[-0.015em] mb-4 sm:mb-4.5">
+          <h1 className="text-[32px] sm:text-[40px] md:text-[46px] lg:text-[48px] font-sans font-normal text-[#F5E5D2] leading-[1.17] tracking-[-0.015em] mb-4 sm:mb-4.5">
             Explore, plan, and
             <br />
             collect moments{' '}
-            <span className="font-romantic italic font-normal text-[31px] sm:text-[39px] md:text-[44px] lg:text-[46px] text-[#F5E5D2]">
+            <span className="font-romantic italic font-normal text-[#F5E5D2]">
               together.
             </span>
           </h1>
 
           {/* Description */}
-          <p className="text-[14px] sm:text-[15px] md:text-[15.5px] text-[#B8A99B] font-sans font-normal leading-[1.62] max-w-[440px] mb-7 sm:mb-8">
+          <p className="text-[14px] sm:text-[15px] md:text-[15.5px] text-[#C4B5A6] font-sans font-normal leading-[1.62] max-w-[450px] mb-7 sm:mb-8">
             Discover date ideas, beautiful places, and experiences
             <br className="hidden sm:inline" />
             {' '}made for two.
@@ -96,7 +96,7 @@ export const Hero: React.FC<HeroProps> = ({
             {/* Primary CTA */}
             <button
               onClick={onStartExploring}
-              className="group inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#F5E5D2] text-[#1A120D] text-[13.5px] sm:text-[14px] font-medium tracking-normal hover:bg-[#FFF5E8] hover:shadow-[0_0_28px_rgba(245,229,210,0.35)] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer shadow-[0_2px_10px_rgba(0,0,0,0.2)]"
+              className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#F5E5D2] text-[#1A120D] text-[13.5px] sm:text-[14px] font-medium tracking-normal hover:bg-[#FFF5E8] hover:shadow-[0_0_28px_rgba(245,229,210,0.35)] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer shadow-[0_2px_12px_rgba(0,0,0,0.22)]"
             >
               <span>Start Exploring</span>
               <ArrowRight

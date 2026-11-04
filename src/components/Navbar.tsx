@@ -74,7 +74,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Center Pill Navigation - Exact match to Reference Image */}
         <nav
           aria-label="Main Navigation"
-          className="hidden md:inline-flex items-center p-1 rounded-full bg-[#16110E]/45 border border-[#F5E5D2]/14 backdrop-blur-md shadow-[0_4px_24px_-2px_rgba(0,0,0,0.45),inset_0_1px_1px_0_rgba(255,255,255,0.06)]"
+          className="hidden md:inline-flex items-center gap-1.5 p-1 rounded-full bg-[#18110D]/50 border border-[#F5E5D2]/16 backdrop-blur-md shadow-[0_4px_24px_-2px_rgba(0,0,0,0.5),inset_0_1px_1px_0_rgba(255,255,255,0.06)]"
         >
           {navItems.map((item) => {
             const isActive = activeTab === item.tab;
@@ -82,9 +82,9 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 key={item.tab}
                 onClick={() => handleNavClick(item.tab)}
-                className={`px-4.5 py-1.5 rounded-full text-[13px] font-sans transition-all duration-200 cursor-pointer ${
+                className={`px-5 py-1.5 rounded-full text-[13.5px] font-sans transition-all duration-200 cursor-pointer whitespace-nowrap ${
                   isActive
-                    ? 'bg-[#F5E5D2]/16 border border-[#F5E5D2]/18 text-[#F5E5D2] font-medium shadow-[inset_0_1px_1px_rgba(255,255,255,0.14)]'
+                    ? 'bg-[#F5E5D2]/16 text-[#F5E5D2] font-medium shadow-[inset_0_1px_1px_rgba(255,255,255,0.14)]'
                     : 'text-[#B8A99B] hover:text-[#F5E5D2] hover:bg-[#F5E5D2]/08 font-normal'
                 }`}
               >

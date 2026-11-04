@@ -18,7 +18,7 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
       icon: (
         <MapPin
           size={14}
-          strokeWidth={1.8}
+          strokeWidth={1.75}
           className="text-[#B8A99B] group-hover:text-[#F5E5D2] transition-colors"
         />
       ),
@@ -34,7 +34,7 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.8"
+          strokeWidth="1.75"
           strokeLinecap="round"
           strokeLinejoin="round"
           className="text-[#B8A99B] group-hover:text-[#F5E5D2] transition-colors"
@@ -50,7 +50,7 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
       icon: (
         <BookOpen
           size={14}
-          strokeWidth={1.8}
+          strokeWidth={1.75}
           className="text-[#B8A99B] group-hover:text-[#F5E5D2] transition-colors"
         />
       ),
@@ -62,7 +62,7 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
       icon: (
         <Heart
           size={14}
-          strokeWidth={1.8}
+          strokeWidth={1.75}
           className="text-[#B8A99B] group-hover:text-[#F5E5D2] transition-colors"
         />
       ),
@@ -71,15 +71,15 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
   ];
 
   return (
-    <div className="flex items-center gap-2.5 sm:gap-3 overflow-x-auto no-scrollbar py-1 w-full max-w-full flex-nowrap">
+    <div className="flex items-center gap-3 overflow-x-auto no-scrollbar py-1 w-full max-w-full flex-nowrap">
       {chips.map((chip) => (
         <button
           key={chip.id}
           onClick={chip.action}
-          className="group inline-flex items-center gap-2.5 px-4.5 py-2 sm:py-2.5 rounded-full bg-[#16110E]/45 border border-[#F5E5D2]/15 backdrop-blur-md text-[#CFC2B4] hover:text-[#F5E5D2] hover:bg-[#281D17]/70 hover:border-[#F5E5D2]/35 hover:shadow-[0_0_22px_rgba(216,139,85,0.22),0_4px_20px_-2px_rgba(0,0,0,0.5)] transition-all duration-200 cursor-pointer shadow-[0_4px_20px_-2px_rgba(0,0,0,0.4),inset_0_1px_1px_0_rgba(255,255,255,0.06)] transform hover:-translate-y-0.5 shrink-0"
+          className="group inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#18110D]/45 border border-[#F5E5D2]/16 backdrop-blur-md text-[#D8CDC2] hover:text-[#F5E5D2] hover:bg-[#281D17]/70 hover:border-[#F5E5D2]/32 hover:shadow-[0_0_24px_rgba(216,139,85,0.22)] transition-all duration-200 cursor-pointer shadow-[0_4px_20px_-2px_rgba(0,0,0,0.45),inset_0_1px_1px_0_rgba(255,255,255,0.06)] transform hover:-translate-y-0.5 shrink-0"
         >
           {chip.icon}
-          <span className="text-[12.5px] sm:text-[13px] font-sans font-normal tracking-wide whitespace-nowrap">
+          <span className="text-[13px] font-sans font-normal tracking-wide whitespace-nowrap">
             {chip.label}
           </span>
         </button>
