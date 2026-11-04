@@ -1,0 +1,23 @@
+- main [ref=f4e3]:
+  - generic [ref=f4e5]:
+    - button "Lunelle Homepage" [ref=f4e6] [cursor=pointer]:
+      - generic [ref=f4e12]: Lunelle
+    - generic [ref=f4e60]:
+      - button "Our Space" [ref=f4e61] [cursor=pointer]
+      - button "Toggle Navigation Menu" [ref=f4e66] [cursor=pointer]
+  - generic [ref=f4e24]:
+    - generic:
+      - img "Original Earth horizon sunrise with couple standing on cliff"
+    - generic [ref=f4e25]:
+      - generic [ref=f4e27]:
+        - generic [ref=f4e28]: A SPACE FOR TWO
+        - heading "Explore, plan, and collect moments together." [level=1] [ref=f4e29]: Explore, plan, andcollect moments together.
+        - paragraph [ref=f4e30]: Discover date ideas, beautiful places, and experiences made for two.
+        - generic [ref=f4e31]:
+          - button "Start Exploring" [ref=f4e32] [cursor=pointer]
+          - button "Watch the Story" [ref=f4e36] [cursor=pointer]
+      - generic [ref=f4e42]:
+        - button "Curated Date Ideas" [ref=f4e43] [cursor=pointer]
+        - button "Places to Explore" [ref=f4e48] [cursor=pointer]
+        - button "Real Couple Stories" [ref=f4e52] [cursor=pointer]
+        - button "A Shared Space" [ref=f4e56] [cursor=pointer]

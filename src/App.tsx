@@ -22,10 +22,6 @@ export const App: React.FC = () => {
   const [bucketList, setBucketList] = useState<BucketListItem[]>(INITIAL_BUCKET_LIST);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  // Ambient sound generator via Web Audio API (gentle warm cosmic drone, harmonic & calming)
-  const [isAmbiancePlaying, setIsAmbiancePlaying] = useState(false);
-  const [audioCtx, setAudioCtx] = useState<AudioContext | null>(null);
-
   const showToast = (msg: string) => {
     setToastMessage(msg);
     setTimeout(() => setToastMessage(null), 3000);
@@ -128,59 +124,6 @@ export const App: React.FC = () => {
     handleSaveToOurSpace(text, 'Shared Dream');
   };
 
-  // Toggle ambient atmospheric soundscape using Web Audio API
-  const toggleAmbiance = () => {
-    if (isAmbiancePlaying) {
-      if (audioCtx) {
-        audioCtx.close();
-        setAudioCtx(null);
-      }
-      setIsAmbiancePlaying(false);
-    } else {
-      try {
-        const ctx = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
-        
-        // Warm harmonic drone (Chord: C3, G3, E4 softly filtered)
-        const freqs = [130.81, 196.0, 329.63];
-        const masterGain = ctx.createGain();
-        masterGain.gain.setValueAtTime(0.06, ctx.currentTime);
-
-        const filter = ctx.createBiquadFilter();
-        filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(450, ctx.currentTime);
-
-        freqs.forEach((freq) => {
-          const osc = ctx.createOscillator();
-          const oscGain = ctx.createGain();
-          osc.type = 'sine';
-          osc.frequency.setValueAtTime(freq, ctx.currentTime);
-          oscGain.gain.setValueAtTime(0.3, ctx.currentTime);
-
-          // Subtle LFO for breathing wave effect
-          const lfo = ctx.createOscillator();
-          const lfoGain = ctx.createGain();
-          lfo.frequency.setValueAtTime(0.12, ctx.currentTime);
-          lfoGain.gain.setValueAtTime(0.1, ctx.currentTime);
-          lfo.connect(lfoGain);
-          lfoGain.connect(oscGain.gain);
-
-          osc.connect(oscGain);
-          oscGain.connect(filter);
-          osc.start();
-          lfo.start();
-        });
-
-        filter.connect(masterGain);
-        masterGain.connect(ctx.destination);
-        setAudioCtx(ctx);
-        setIsAmbiancePlaying(true);
-        showToast('Ambient horizon audio active');
-      } catch (err) {
-        console.error('Web Audio error:', err);
-      }
-    }
-  };
-
   return (
     <main className="relative w-full min-h-screen bg-[#100D0B] text-[#F5E5D2] font-sans selection:bg-[#D88B55]/30 selection:text-[#F5E5D2]">
       {/* Minimalist Header Navigation */}
@@ -188,8 +131,6 @@ export const App: React.FC = () => {
         activeTab={activeTab}
         onSelectTab={handleSelectTab}
         onOpenOurSpace={handleOpenOurSpace}
-        isAmbiancePlaying={isAmbiancePlaying}
-        onToggleAmbiance={toggleAmbiance}
       />
 
       {/* Hero Section matching Reference 2 with 100vh canvas */}

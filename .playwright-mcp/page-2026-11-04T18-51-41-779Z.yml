@@ -1,0 +1,45 @@
+- main [ref=f4e3]:
+  - generic [ref=f4e5]:
+    - button "Lunelle Homepage" [ref=f4e6] [cursor=pointer]:
+      - generic [ref=f4e12]: Lunelle
+    - generic [ref=f4e60]:
+      - button "Our Space" [ref=f4e61] [cursor=pointer]
+      - button "Toggle Navigation Menu" [ref=f4e66] [cursor=pointer]
+  - generic [ref=f4e24]:
+    - generic:
+      - img "Original Earth horizon sunrise with couple standing on cliff"
+    - generic [ref=f4e25]:
+      - generic [ref=f4e27]:
+        - generic [ref=f4e28]: A SPACE FOR TWO
+        - heading "Explore, plan, and collect moments together." [level=1] [ref=f4e29]: Explore, plan, andcollect moments together.
+        - paragraph [ref=f4e30]: Discover date ideas, beautiful places, and experiences made for two.
+        - generic [ref=f4e31]:
+          - button "Start Exploring" [ref=f4e32] [cursor=pointer]
+          - button "Watch the Story" [active] [ref=f4e36] [cursor=pointer]
+      - generic [ref=f4e42]:
+        - button "Curated Date Ideas" [ref=f4e43] [cursor=pointer]
+        - button "Places to Explore" [ref=f4e48] [cursor=pointer]
+        - button "Real Couple Stories" [ref=f4e52] [cursor=pointer]
+        - button "A Shared Space" [ref=f4e56] [cursor=pointer]
+  - generic [ref=f4e69]:
+    - generic [ref=f4e70]:
+      - generic [ref=f4e71]:
+        - generic [ref=f4e72]: Cinematic Prelude
+        - generic [ref=f4e76]: •
+        - generic [ref=f4e77]: The Philosophy of Lunelle
+      - generic [ref=f4e78]:
+        - button "Toggle ambient audio" [ref=f4e79] [cursor=pointer]
+        - button "Close story" [ref=f4e84] [cursor=pointer]
+    - generic [ref=f4e88]:
+      - img "Cinematic background" [ref=f4e90]
+      - generic [ref=f4e93]:
+        - generic [ref=f4e94]: Act I • The Orbit
+        - heading "\"In a cosmos of eight billion souls\"" [level=3] [ref=f4e95]
+        - paragraph [ref=f4e96]: We spend our lives navigating vast, solitary spaces. Until one day, someone looks at the same horizon and chooses to stand beside you.
+      - generic [ref=f4e97]:
+        - button "Go to slide 1" [ref=f4e98] [cursor=pointer]
+        - button "Go to slide 2" [ref=f4e99] [cursor=pointer]
+        - button "Go to slide 3" [ref=f4e100] [cursor=pointer]
+    - generic [ref=f4e101]:
+      - button "Pause Experience" [ref=f4e102] [cursor=pointer]
+      - generic [ref=f4e107]: "Atmospheric Audio: Cosmic Dawn (432Hz)"

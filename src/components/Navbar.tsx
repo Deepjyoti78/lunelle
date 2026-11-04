@@ -1,21 +1,17 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Menu, X, Volume2, VolumeX } from 'lucide-react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 import type { ActiveTab } from '../types';
 
 interface NavbarProps {
   activeTab: ActiveTab;
   onSelectTab: (tab: ActiveTab) => void;
   onOpenOurSpace: () => void;
-  isAmbiancePlaying: boolean;
-  onToggleAmbiance: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   activeTab,
   onSelectTab,
   onOpenOurSpace,
-  isAmbiancePlaying,
-  onToggleAmbiance,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -33,18 +29,18 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header className="absolute top-0 left-0 right-0 z-40">
-      <div className="w-full max-w-[1920px] mx-auto px-6 sm:px-12 md:px-16 lg:px-20 py-5 sm:py-6 md:py-7 flex items-center justify-between">
-        {/* Brand Logo & Wordmark */}
+      <div className="w-full max-w-[1920px] mx-auto px-8 sm:px-12 md:px-16 lg:px-20 py-6 md:py-7 flex items-center justify-between">
+        {/* Brand Logo & Wordmark - Lunelle */}
         <button
           onClick={() => handleNavClick('discover')}
           className="flex items-center gap-2.5 group cursor-pointer focus:outline-none"
-          aria-label="Aevora Homepage"
+          aria-label="Lunelle Homepage"
         >
-          {/* Exact 3-wave brandmark matching Reference 2 */}
+          {/* Exact 3-wave brandmark matching Reference Image */}
           <div className="relative flex items-center justify-center text-[#F5E5D2] group-hover:text-white transition-colors">
             <svg
-              width="23"
-              height="17"
+              width="24"
+              height="18"
               viewBox="0 0 24 18"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -71,14 +67,14 @@ export const Navbar: React.FC<NavbarProps> = ({
             </svg>
           </div>
           <span className="text-[#F5E5D2] text-[18px] md:text-[19px] font-sans font-medium tracking-normal group-hover:text-white transition-colors">
-            Aevora
+            Lunelle
           </span>
         </button>
 
-        {/* Desktop Center Pill Navigation - matching Calyra & Reference 2 */}
+        {/* Center Pill Navigation - Exact match to Reference Image */}
         <nav
           aria-label="Main Navigation"
-          className="hidden md:inline-flex items-center p-1 rounded-full bg-[#18120E]/45 border border-[#F5E5D2]/16 backdrop-blur-md shadow-[0_4px_24px_-4px_rgba(0,0,0,0.6)]"
+          className="hidden md:inline-flex items-center p-1 rounded-full bg-[#16110E]/45 border border-[#F5E5D2]/14 backdrop-blur-md shadow-[0_4px_24px_-2px_rgba(0,0,0,0.45),inset_0_1px_1px_0_rgba(255,255,255,0.06)]"
         >
           {navItems.map((item) => {
             const isActive = activeTab === item.tab;
@@ -88,8 +84,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => handleNavClick(item.tab)}
                 className={`px-4.5 py-1.5 rounded-full text-[13px] font-sans transition-all duration-200 cursor-pointer ${
                   isActive
-                    ? 'bg-[#F5E5D2]/16 text-[#F5E5D2] font-medium shadow-[inset_0_1px_1px_rgba(255,255,255,0.14)]'
-                    : 'text-[#C8B8AA] hover:text-[#F5E5D2] hover:bg-[#F5E5D2]/08 font-normal'
+                    ? 'bg-[#F5E5D2]/16 border border-[#F5E5D2]/18 text-[#F5E5D2] font-medium shadow-[inset_0_1px_1px_rgba(255,255,255,0.14)]'
+                    : 'text-[#B8A99B] hover:text-[#F5E5D2] hover:bg-[#F5E5D2]/08 font-normal'
                 }`}
               >
                 {item.label}
@@ -98,28 +94,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           })}
         </nav>
 
-        {/* Desktop Right Side CTA - "Our Space ↗" & Ambient sound toggle */}
-        <div className="hidden md:flex items-center gap-3">
-          <button
-            onClick={onToggleAmbiance}
-            className={`p-2 rounded-full border backdrop-blur-md transition-all duration-300 cursor-pointer ${
-              isAmbiancePlaying
-                ? 'bg-[#D88B55]/20 border-[#D88B55]/50 text-[#F5E5D2] shadow-[0_0_14px_rgba(216,139,85,0.3)]'
-                : 'bg-[#18120E]/40 border-[#F5E5D2]/14 text-[#C8B8AA] hover:text-[#F5E5D2] hover:bg-[#18120E]/70'
-            }`}
-            title={isAmbiancePlaying ? 'Mute Ambient Horizon Audio' : 'Play Warm Ambiance Soundscape'}
-            aria-label="Toggle ambient atmospheric audio"
-          >
-            {isAmbiancePlaying ? (
-              <Volume2 size={14} className="text-[#D88B55] animate-pulse" />
-            ) : (
-              <VolumeX size={14} />
-            )}
-          </button>
-
+        {/* Right Side CTA - "Our Space ↗" */}
+        <div className="hidden md:flex items-center">
           <button
             onClick={onOpenOurSpace}
-            className="group inline-flex items-center gap-1.5 px-4.5 py-2 rounded-full bg-[#F5E5D2] text-[#1A120D] text-[13px] font-medium tracking-normal hover:bg-[#FFF5E8] hover:shadow-[0_0_24px_rgba(245,229,210,0.32)] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer"
+            className="group inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#F5E5D2] text-[#1A120D] text-[13px] font-semibold tracking-normal hover:bg-[#FFF5E8] hover:shadow-[0_0_24px_rgba(245,229,210,0.35)] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer shadow-[0_2px_10px_rgba(0,0,0,0.25)]"
           >
             <span>Our Space</span>
             <ArrowUpRight
@@ -133,23 +112,8 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Mobile Controls */}
         <div className="flex md:hidden items-center gap-2">
           <button
-            onClick={onToggleAmbiance}
-            className={`p-1.5 rounded-full border backdrop-blur-md transition-all ${
-              isAmbiancePlaying
-                ? 'bg-[#D88B55]/20 border-[#D88B55]/50 text-[#F5E5D2]'
-                : 'bg-[#18120E]/40 border-[#F5E5D2]/14 text-[#C8B8AA]'
-            }`}
-            aria-label="Toggle ambient audio"
-          >
-            {isAmbiancePlaying ? (
-              <Volume2 size={13} className="text-[#D88B55]" />
-            ) : (
-              <VolumeX size={13} />
-            )}
-          </button>
-          <button
             onClick={onOpenOurSpace}
-            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#F5E5D2] text-[#1A120D] text-[12px] font-medium tracking-normal"
+            className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-[#F5E5D2] text-[#1A120D] text-[12px] font-medium tracking-normal"
           >
             <span>Our Space</span>
             <ArrowUpRight size={12} strokeWidth={2.4} />
@@ -176,7 +140,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className={`w-full text-left px-4 py-2.5 rounded-xl text-[14px] transition-colors ${
                   isActive
                     ? 'bg-[#F5E5D2]/15 text-[#F5E5D2] font-medium'
-                    : 'text-[#C8B8AA] hover:text-[#F5E5D2] hover:bg-[#F5E5D2]/08'
+                    : 'text-[#B8A99B] hover:text-[#F5E5D2] hover:bg-[#F5E5D2]/08'
                 }`}
               >
                 {item.label}

@@ -30,7 +30,7 @@ export const WatchStoryModal: React.FC<WatchStoryModalProps> = ({
     {
       act: 'Act III • The Edge',
       title: 'A sanctuary built for two',
-      text: 'Aevora was made so you never run out of horizons to chase together. From the high cliffs of Big Sur to quiet rooftops under amber skies.',
+      text: 'Lunelle was made so you never run out of horizons to chase together. From the high cliffs of Big Sur to quiet rooftops under amber skies.',
       time: '0:30',
     },
   ];
@@ -59,7 +59,7 @@ export const WatchStoryModal: React.FC<WatchStoryModalProps> = ({
               <Sparkles size={12} /> Cinematic Prelude
             </span>
             <span className="text-[#C8B8AA]/40">•</span>
-            <span className="text-xs text-[#C8B8AA]">The Philosophy of Aevora</span>
+            <span className="text-xs text-[#C8B8AA]">The Philosophy of Lunelle</span>
           </div>
 
           <div className="flex items-center gap-3">

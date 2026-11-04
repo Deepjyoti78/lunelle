@@ -19,7 +19,7 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
         <MapPin
           size={14}
           strokeWidth={1.8}
-          className="text-[#C8B8AA] group-hover:text-[#F5E5D2] transition-colors"
+          className="text-[#B8A99B] group-hover:text-[#F5E5D2] transition-colors"
         />
       ),
       action: () => onSelectFeature('date-ideas'),
@@ -37,7 +37,7 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
           strokeWidth="1.8"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="text-[#C8B8AA] group-hover:text-[#F5E5D2] transition-colors"
+          className="text-[#B8A99B] group-hover:text-[#F5E5D2] transition-colors"
         >
           <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
         </svg>
@@ -51,7 +51,7 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
         <BookOpen
           size={14}
           strokeWidth={1.8}
-          className="text-[#C8B8AA] group-hover:text-[#F5E5D2] transition-colors"
+          className="text-[#B8A99B] group-hover:text-[#F5E5D2] transition-colors"
         />
       ),
       action: () => onSelectFeature('stories'),
@@ -63,7 +63,7 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
         <Heart
           size={14}
           strokeWidth={1.8}
-          className="text-[#C8B8AA] group-hover:text-[#F5E5D2] transition-colors"
+          className="text-[#B8A99B] group-hover:text-[#F5E5D2] transition-colors"
         />
       ),
       action: onOpenOurSpace,
@@ -71,15 +71,15 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
   ];
 
   return (
-    <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto no-scrollbar py-1 w-full max-w-full flex-nowrap">
+    <div className="flex items-center gap-2.5 sm:gap-3 overflow-x-auto no-scrollbar py-1 w-full max-w-full flex-nowrap">
       {chips.map((chip) => (
         <button
           key={chip.id}
           onClick={chip.action}
-          className="group inline-flex items-center gap-2 sm:gap-2.5 px-3.5 sm:px-4.5 py-2 sm:py-2.5 rounded-full bg-[#18120E]/45 border border-[#F5E5D2]/16 backdrop-blur-md text-[#D8CEC4] hover:text-[#F5E5D2] hover:bg-[#251A13]/70 hover:border-[#F5E5D2]/32 transition-all duration-200 cursor-pointer shadow-[0_2px_12px_rgba(0,0,0,0.35)] shrink-0"
+          className="group inline-flex items-center gap-2.5 px-4.5 py-2 sm:py-2.5 rounded-full bg-[#16110E]/45 border border-[#F5E5D2]/15 backdrop-blur-md text-[#CFC2B4] hover:text-[#F5E5D2] hover:bg-[#281D17]/70 hover:border-[#F5E5D2]/35 hover:shadow-[0_0_22px_rgba(216,139,85,0.22),0_4px_20px_-2px_rgba(0,0,0,0.5)] transition-all duration-200 cursor-pointer shadow-[0_4px_20px_-2px_rgba(0,0,0,0.4),inset_0_1px_1px_0_rgba(255,255,255,0.06)] transform hover:-translate-y-0.5 shrink-0"
         >
           {chip.icon}
-          <span className="text-[12px] sm:text-[13px] font-sans font-normal tracking-wide whitespace-nowrap">
+          <span className="text-[12.5px] sm:text-[13px] font-sans font-normal tracking-wide whitespace-nowrap">
             {chip.label}
           </span>
         </button>
