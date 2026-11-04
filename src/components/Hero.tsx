@@ -75,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
 
           {/* Heading: Explore, plan, and / collect moments together. */}
-          <h1 className="text-[32px] sm:text-[40px] md:text-[46px] lg:text-[48px] font-sans font-normal text-[#F5E5D2] leading-[1.17] tracking-[-0.015em] mb-4 sm:mb-4.5">
+          <h1 className="text-[32px] sm:text-[40px] md:text-[45px] lg:text-[46px] font-sans font-normal text-[#F5E5D2] leading-[1.17] tracking-[-0.015em] mb-4 sm:mb-4.5">
             Explore, plan, and
             <br />
             collect moments{' '}

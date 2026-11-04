@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, BookOpen, Heart } from 'lucide-react';
+import { BookOpen, Heart } from 'lucide-react';
 import type { ActiveTab } from '../types';
 
 interface BottomChipsProps {
@@ -16,11 +16,20 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
       id: 'date-ideas',
       label: 'Curated Date Ideas',
       icon: (
-        <MapPin
-          size={14}
-          strokeWidth={1.75}
-          className="text-[#B8A99B] group-hover:text-[#F5E5D2] transition-colors"
-        />
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="text-[#C4B5A5] group-hover:text-[#F5E5D2] transition-colors"
+        >
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
       ),
       action: () => onSelectFeature('date-ideas'),
     },
@@ -34,12 +43,13 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.75"
+          strokeWidth="1.8"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="text-[#B8A99B] group-hover:text-[#F5E5D2] transition-colors"
+          className="text-[#C4B5A5] group-hover:text-[#F5E5D2] transition-colors"
         >
-          <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+          <polygon points="12 3 2 21 22 21" />
+          <polyline points="7 21 12 11 17 21" />
         </svg>
       ),
       action: () => onSelectFeature('places'),
@@ -50,8 +60,8 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
       icon: (
         <BookOpen
           size={14}
-          strokeWidth={1.75}
-          className="text-[#B8A99B] group-hover:text-[#F5E5D2] transition-colors"
+          strokeWidth={1.8}
+          className="text-[#C4B5A5] group-hover:text-[#F5E5D2] transition-colors"
         />
       ),
       action: () => onSelectFeature('stories'),
@@ -62,8 +72,8 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
       icon: (
         <Heart
           size={14}
-          strokeWidth={1.75}
-          className="text-[#B8A99B] group-hover:text-[#F5E5D2] transition-colors"
+          strokeWidth={1.8}
+          className="text-[#C4B5A5] group-hover:text-[#F5E5D2] transition-colors"
         />
       ),
       action: onOpenOurSpace,
@@ -71,12 +81,12 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
   ];
 
   return (
-    <div className="flex items-center gap-3 overflow-x-auto no-scrollbar py-1 w-full max-w-full flex-nowrap">
+    <div className="flex items-center gap-3 sm:gap-3.5 overflow-x-auto no-scrollbar py-1 w-full max-w-full flex-nowrap">
       {chips.map((chip) => (
         <button
           key={chip.id}
           onClick={chip.action}
-          className="group inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#18110D]/45 border border-[#F5E5D2]/16 backdrop-blur-md text-[#D8CDC2] hover:text-[#F5E5D2] hover:bg-[#281D17]/70 hover:border-[#F5E5D2]/32 hover:shadow-[0_0_24px_rgba(216,139,85,0.22)] transition-all duration-200 cursor-pointer shadow-[0_4px_20px_-2px_rgba(0,0,0,0.45),inset_0_1px_1px_0_rgba(255,255,255,0.06)] transform hover:-translate-y-0.5 shrink-0"
+          className="group inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full glass-surface text-[#D8CDC2] hover:text-[#F5E5D2] transition-all duration-300 cursor-pointer transform hover:-translate-y-0.5 shrink-0"
         >
           {chip.icon}
           <span className="text-[13px] font-sans font-normal tracking-wide whitespace-nowrap">

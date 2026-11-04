@@ -1,0 +1,109 @@
+- main [ref=f6e3]:
+  - generic [ref=f6e5]:
+    - generic [ref=f6e6]:
+      - button "Lunelle Homepage" [ref=f6e7] [cursor=pointer]:
+        - generic [ref=f6e13]: Lunelle
+      - navigation "Main Navigation" [ref=f6e14]:
+        - button "Discover" [ref=f6e15] [cursor=pointer]
+        - button "Date Ideas" [ref=f6e16] [cursor=pointer]
+        - button "Places" [ref=f6e17] [cursor=pointer]
+        - button "Stories" [ref=f6e18] [cursor=pointer]
+    - button "Our Space" [ref=f6e20] [cursor=pointer]
+  - generic [ref=f6e25]:
+    - generic:
+      - img "Original Earth horizon sunrise with couple standing on cliff"
+    - generic [ref=f6e26]:
+      - generic [ref=f6e28]:
+        - generic [ref=f6e29]: A SPACE FOR TWO
+        - heading "Explore, plan, and collect moments together." [level=1] [ref=f6e30]: Explore, plan, andcollect moments together.
+        - paragraph [ref=f6e31]: Discover date ideas, beautiful places, and experiences made for two.
+        - generic [ref=f6e32]:
+          - button "Start Exploring" [ref=f6e33] [cursor=pointer]
+          - button "Watch the Story" [ref=f6e37] [cursor=pointer]
+      - generic [ref=f6e43]:
+        - button "Curated Date Ideas" [active] [ref=f6e44] [cursor=pointer]
+        - button "Places to Explore" [ref=f6e49] [cursor=pointer]
+        - button "Real Couple Stories" [ref=f6e54] [cursor=pointer]
+        - button "A Shared Space" [ref=f6e58] [cursor=pointer]
+  - generic [ref=f6e63]:
+    - generic [ref=f6e64]:
+      - generic [ref=f6e65]:
+        - generic [ref=f6e66]:
+          - generic [ref=f6e67]: Discovery Archive
+          - generic [ref=f6e68]: •
+          - generic [ref=f6e69]: Curated for Two
+        - heading "Explore Experiences & Date Rituals" [level=2] [ref=f6e70]
+      - button "Close modal" [ref=f6e71] [cursor=pointer]
+    - generic [ref=f6e75]:
+      - generic [ref=f6e76]:
+        - button "All" [ref=f6e77] [cursor=pointer]
+        - button "Starlit" [ref=f6e78] [cursor=pointer]
+        - button "Intimate" [ref=f6e79] [cursor=pointer]
+        - button "Adventurous" [ref=f6e80] [cursor=pointer]
+        - button "Culinary" [ref=f6e81] [cursor=pointer]
+        - button "Artistic" [ref=f6e82] [cursor=pointer]
+      - button "Surprise Us" [ref=f6e83] [cursor=pointer]
+    - generic [ref=f6e89]:
+      - generic [ref=f6e90]:
+        - generic [ref=f6e91]:
+          - generic [ref=f6e92]:
+            - generic [ref=f6e93]: Starlit
+            - generic [ref=f6e94]: 3 hours
+          - heading "Cliffside Stargazing with Hot Cider" [level=3] [ref=f6e99]
+          - paragraph [ref=f6e100]: Drive to a high coastal bluff at dusk. Wrap yourselves in a heavy wool blanket, listen to ambient vinyl, and track constellations as the horizon deepens.
+        - generic [ref=f6e101]:
+          - generic [ref=f6e102]: Atmospheric & Deep
+          - button "Add to Our Space" [ref=f6e103] [cursor=pointer]
+      - generic [ref=f6e107]:
+        - generic [ref=f6e108]:
+          - generic [ref=f6e109]:
+            - generic [ref=f6e110]: Intimate
+            - generic [ref=f6e111]: 2 hours
+          - heading "Midnight Vinyl & Low Light Listening" [level=3] [ref=f6e116]
+          - paragraph [ref=f6e117]: Dim every overhead light. Light three amber beeswax candles. Take turns playing three records that shaped your souls before you met.
+        - generic [ref=f6e118]:
+          - generic [ref=f6e119]: Slow & Nostalgic
+          - button "Add to Our Space" [ref=f6e120] [cursor=pointer]
+      - generic [ref=f6e124]:
+        - generic [ref=f6e125]:
+          - generic [ref=f6e126]:
+            - generic [ref=f6e127]: Culinary
+            - generic [ref=f6e128]: 2.5 hours
+          - heading "Blue Hour Rooftop Supper" [level=3] [ref=f6e133]
+          - paragraph [ref=f6e134]: A wooden board with fig jam, aged manchego, fresh sourdough, and warm herbal tea enjoyed 20 minutes after sunset when the city turns cobalt blue.
+        - generic [ref=f6e135]:
+          - generic [ref=f6e136]: Cinematic & Romantic
+          - button "Add to Our Space" [ref=f6e137] [cursor=pointer]
+      - generic [ref=f6e141]:
+        - generic [ref=f6e142]:
+          - generic [ref=f6e143]:
+            - generic [ref=f6e144]: Adventurous
+            - generic [ref=f6e145]: 3.5 hours
+          - heading "Bioluminescent Night Paddle" [level=3] [ref=f6e150]
+          - paragraph [ref=f6e151]: Glide into calm sheltered waters under a new moon where every stroke of your oars sparks a turquoise halo beneath the surface.
+        - generic [ref=f6e152]:
+          - generic [ref=f6e153]: Ethereal & Magical
+          - button "Add to Our Space" [ref=f6e154] [cursor=pointer]
+      - generic [ref=f6e158]:
+        - generic [ref=f6e159]:
+          - generic [ref=f6e160]:
+            - generic [ref=f6e161]: Artistic
+            - generic [ref=f6e162]: 2.5 hours
+          - heading "Clay & Candlelight Pottery Studio" [level=3] [ref=f6e167]
+          - paragraph [ref=f6e168]: Book an after-hours private ceramic wheel session. Shape a shared tea set with your hands covered in smooth wet clay and ambient jazz.
+        - generic [ref=f6e169]:
+          - generic [ref=f6e170]: Tactile & Playful
+          - button "Add to Our Space" [ref=f6e171] [cursor=pointer]
+      - generic [ref=f6e175]:
+        - generic [ref=f6e176]:
+          - generic [ref=f6e177]:
+            - generic [ref=f6e178]: Adventurous
+            - generic [ref=f6e179]: 2 hours
+          - heading "First Light Forest Trail" [level=3] [ref=f6e184]
+          - paragraph [ref=f6e185]: Wake up before the sun. Walk through dew-soaked redwoods with a thermos of pour-over coffee while the world is still asleep.
+        - generic [ref=f6e186]:
+          - generic [ref=f6e187]: Peaceful & Grounding
+          - button "Add to Our Space" [ref=f6e188] [cursor=pointer]
+    - generic [ref=f6e192]:
+      - generic [ref=f6e193]: Showing 6 curated moments
+      - button "Back to Horizon" [ref=f6e194] [cursor=pointer]

@@ -30,69 +30,72 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header className="absolute top-0 left-0 right-0 z-40">
       <div className="w-full max-w-[1920px] mx-auto px-8 sm:px-12 md:px-16 lg:px-20 py-6 md:py-7 flex items-center justify-between">
-        {/* Brand Logo & Wordmark - Lunelle */}
-        <button
-          onClick={() => handleNavClick('discover')}
-          className="flex items-center gap-2.5 group cursor-pointer focus:outline-none"
-          aria-label="Lunelle Homepage"
-        >
-          {/* Exact 3-wave brandmark matching Reference Image */}
-          <div className="relative flex items-center justify-center text-[#F5E5D2] group-hover:text-white transition-colors">
-            <svg
-              width="24"
-              height="18"
-              viewBox="0 0 24 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="transition-transform duration-300 group-hover:scale-105"
-            >
-              <path
-                d="M2 3.5C5.5 1.5 8.5 1.5 12 3.5C15.5 5.5 18.5 5.5 22 3.5"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              <path
-                d="M2 9C5.5 7 8.5 7 12 9C15.5 11 18.5 11 22 9"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              <path
-                d="M2 14.5C5.5 12.5 8.5 12.5 12 14.5C15.5 16.5 18.5 16.5 22 14.5"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-          </div>
-          <span className="text-[#F5E5D2] text-[18px] md:text-[19px] font-sans font-medium tracking-normal group-hover:text-white transition-colors">
-            Lunelle
-          </span>
-        </button>
-
-        {/* Center Pill Navigation - Exact match to Reference Image */}
-        <nav
-          aria-label="Main Navigation"
-          className="hidden md:inline-flex items-center gap-1.5 p-1 rounded-full bg-[#18110D]/50 border border-[#F5E5D2]/16 backdrop-blur-md shadow-[0_4px_24px_-2px_rgba(0,0,0,0.5),inset_0_1px_1px_0_rgba(255,255,255,0.06)]"
-        >
-          {navItems.map((item) => {
-            const isActive = activeTab === item.tab;
-            return (
-              <button
-                key={item.tab}
-                onClick={() => handleNavClick(item.tab)}
-                className={`px-5 py-1.5 rounded-full text-[13.5px] font-sans transition-all duration-200 cursor-pointer whitespace-nowrap ${
-                  isActive
-                    ? 'bg-[#F5E5D2]/16 text-[#F5E5D2] font-medium shadow-[inset_0_1px_1px_rgba(255,255,255,0.14)]'
-                    : 'text-[#B8A99B] hover:text-[#F5E5D2] hover:bg-[#F5E5D2]/08 font-normal'
-                }`}
+        {/* Left Side Group: Logo + Left-Shifted Glass Navbar Pill matching Reference 2 */}
+        <div className="flex items-center gap-7 lg:gap-10">
+          {/* Brand Logo & Wordmark - Lunelle */}
+          <button
+            onClick={() => handleNavClick('discover')}
+            className="flex items-center gap-2.5 group cursor-pointer focus:outline-none shrink-0"
+            aria-label="Lunelle Homepage"
+          >
+            {/* 3-wave brandmark matching Reference 2 */}
+            <div className="relative flex items-center justify-center text-[#F5E5D2] group-hover:text-white transition-colors">
+              <svg
+                width="24"
+                height="18"
+                viewBox="0 0 24 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="transition-transform duration-300 group-hover:scale-105"
               >
-                {item.label}
-              </button>
-            );
-          })}
-        </nav>
+                <path
+                  d="M2 3.5C5.5 1.5 8.5 1.5 12 3.5C15.5 5.5 18.5 5.5 22 3.5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M2 9C5.5 7 8.5 7 12 9C15.5 11 18.5 11 22 9"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M2 14.5C5.5 12.5 8.5 12.5 12 14.5C15.5 16.5 18.5 16.5 22 14.5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </div>
+            <span className="text-[#F5E5D2] text-[18px] md:text-[19px] font-sans font-medium tracking-normal group-hover:text-white transition-colors">
+              Lunelle
+            </span>
+          </button>
+
+          {/* Left-Aligned Glass Pill Navigation - Exactly positioned like Reference 2 */}
+          <nav
+            aria-label="Main Navigation"
+            className="hidden md:inline-flex items-center gap-1.5 p-1 rounded-full glass-surface"
+          >
+            {navItems.map((item) => {
+              const isActive = activeTab === item.tab;
+              return (
+                <button
+                  key={item.tab}
+                  onClick={() => handleNavClick(item.tab)}
+                  className={`px-5 py-1.5 rounded-full text-[13px] font-sans transition-all duration-200 cursor-pointer whitespace-nowrap ${
+                    isActive
+                      ? 'glass-pill-active font-medium'
+                      : 'text-[#C4B5A5] hover:text-[#F5E5D2] hover:bg-[#F5E5D2]/08 font-normal'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
+          </nav>
+        </div>
 
         {/* Right Side CTA - "Our Space ↗" */}
         <div className="hidden md:flex items-center">
@@ -140,7 +143,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className={`w-full text-left px-4 py-2.5 rounded-xl text-[14px] transition-colors ${
                   isActive
                     ? 'bg-[#F5E5D2]/15 text-[#F5E5D2] font-medium'
-                    : 'text-[#B8A99B] hover:text-[#F5E5D2] hover:bg-[#F5E5D2]/08'
+                    : 'text-[#C4B5A5] hover:text-[#F5E5D2] hover:bg-[#F5E5D2]/08'
                 }`}
               >
                 {item.label}
