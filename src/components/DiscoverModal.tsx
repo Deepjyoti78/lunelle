@@ -37,26 +37,26 @@ export const DiscoverModal: React.FC<DiscoverModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/75 backdrop-blur-md animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/80 backdrop-blur-md animate-fadeIn">
       <div
-        className="relative w-full max-w-4xl max-h-[90vh] bg-[#140F0C] border border-[#F5E5D2]/18 rounded-3xl overflow-hidden shadow-2xl flex flex-col"
+        className="relative w-full max-w-4xl max-h-[92dvh] bg-[#140F0C] border border-[#F5E5D2]/18 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="px-6 sm:px-8 py-5 border-b border-[#F5E5D2]/12 flex items-center justify-between bg-[#19130F]/90">
+        <div className="px-4 sm:px-8 py-4 sm:py-5 border-b border-[#F5E5D2]/12 flex items-center justify-between bg-[#19130F]/90">
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-[11px] font-mono tracking-widest text-[#D88B55] uppercase">Discovery Archive</span>
+            <div className="flex items-center gap-2 mb-0.5 sm:mb-1">
+              <span className="text-[10px] sm:text-[11px] font-mono tracking-widest text-[#D88B55] uppercase">Discovery Archive</span>
               <span className="text-[#C8B8AA]/40">•</span>
-              <span className="text-[11px] text-[#C8B8AA]">Curated for Two</span>
+              <span className="text-[10px] sm:text-[11px] text-[#C8B8AA]">Curated for Two</span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-sans font-medium text-[#F5E5D2]">
+            <h2 className="text-lg sm:text-2xl font-sans font-medium text-[#F5E5D2]">
               Explore Experiences & Date Rituals
             </h2>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-full bg-[#F5E5D2]/08 hover:bg-[#F5E5D2]/16 text-[#C8B8AA] hover:text-[#F5E5D2] transition-colors cursor-pointer"
+            className="p-1.5 sm:p-2 rounded-full bg-[#F5E5D2]/08 hover:bg-[#F5E5D2]/16 text-[#C8B8AA] hover:text-[#F5E5D2] transition-colors cursor-pointer"
             aria-label="Close modal"
           >
             <X size={18} />
@@ -64,13 +64,13 @@ export const DiscoverModal: React.FC<DiscoverModalProps> = ({
         </div>
 
         {/* Category Filters & Surprise Action */}
-        <div className="px-6 sm:px-8 py-4 border-b border-[#F5E5D2]/10 bg-[#17110D]/60 flex items-center justify-between flex-wrap gap-3">
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+        <div className="px-4 sm:px-8 py-3 sm:py-4 border-b border-[#F5E5D2]/10 bg-[#17110D]/60 flex items-center justify-between flex-wrap gap-2.5">
+          <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-1 max-w-full">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-3.5 py-1.5 rounded-full text-[12.5px] transition-all cursor-pointer whitespace-nowrap ${
+                className={`px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[12px] sm:text-[12.5px] transition-all cursor-pointer whitespace-nowrap ${
                   selectedCategory === cat
                     ? 'bg-[#F5E5D2] text-[#1A120D] font-medium shadow-sm'
                     : 'bg-[#F5E5D2]/08 text-[#C8B8AA] hover:text-[#F5E5D2] hover:bg-[#F5E5D2]/14'
@@ -83,15 +83,15 @@ export const DiscoverModal: React.FC<DiscoverModalProps> = ({
 
           <button
             onClick={handleSurpriseUs}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#D88B55]/50 bg-[#D88B55]/12 text-[#E2A779] hover:bg-[#D88B55]/20 text-[12.5px] transition-all cursor-pointer shrink-0"
+            className="inline-flex items-center gap-1.5 px-3 py-1 sm:py-1.5 rounded-full border border-[#D88B55]/50 bg-[#D88B55]/12 text-[#E2A779] hover:bg-[#D88B55]/20 text-[11.5px] sm:text-[12.5px] transition-all cursor-pointer shrink-0"
           >
-            <Sparkles size={13} />
+            <Sparkles size={12} />
             <span>Surprise Us</span>
           </button>
         </div>
 
         {/* Content Body */}
-        <div className="p-6 sm:p-8 overflow-y-auto space-y-6 flex-1">
+        <div className="p-4 sm:p-8 overflow-y-auto space-y-4 sm:space-y-6 flex-1">
           {/* Surprise Box if triggered */}
           {randomPrompt && (
             <div className="p-5 rounded-2xl bg-gradient-to-r from-[#281A12] to-[#1C130E] border border-[#D88B55]/40 shadow-lg relative animate-fadeIn">

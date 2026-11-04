@@ -1,0 +1,80 @@
+- main [ref=f8e3]:
+  - generic [ref=f8e5]:
+    - button "Lunelle Homepage" [ref=f8e7] [cursor=pointer]:
+      - generic [ref=f8e13]: Lunelle
+    - generic [ref=f8e62]:
+      - button "Our Space" [active] [ref=f8e63] [cursor=pointer]
+      - button "Toggle Navigation Menu" [ref=f8e68] [cursor=pointer]
+  - generic [ref=f8e25]:
+    - generic:
+      - img "Original Earth horizon sunrise with couple standing on cliff"
+    - generic [ref=f8e26]:
+      - generic [ref=f8e27]:
+        - generic [ref=f8e28]: A SPACE FOR TWO
+        - heading "Explore, plan, and collect moments together." [level=1] [ref=f8e29]:
+          - text: Explore, plan, andcollect moments
+          - generic [ref=f8e30]: together.
+        - paragraph [ref=f8e31]: Discover date ideas, beautiful places, and experiences made for two.
+        - generic [ref=f8e32]:
+          - button "Start Exploring" [ref=f8e33] [cursor=pointer]
+          - button "Watch the Story" [ref=f8e37] [cursor=pointer]
+      - generic [ref=f8e43]:
+        - button "Curated Date Ideas" [ref=f8e44] [cursor=pointer]
+        - button "Places to Explore" [ref=f8e49] [cursor=pointer]
+        - button "Real Couple Stories" [ref=f8e54] [cursor=pointer]
+        - button "A Shared Space" [ref=f8e58] [cursor=pointer]
+  - generic [ref=f8e71]:
+    - generic [ref=f8e72]:
+      - generic [ref=f8e77]:
+        - generic [ref=f8e78]:
+          - generic [ref=f8e79]: Private Sanctuary
+          - generic [ref=f8e80]: •
+          - generic [ref=f8e81]: Elena & David’s Orbit
+        - heading "Our Space" [level=2] [ref=f8e82]
+      - button "Close modal" [ref=f8e83] [cursor=pointer]
+    - generic [ref=f8e87]:
+      - generic [ref=f8e88]:
+        - generic [ref=f8e89]:
+          - generic [ref=f8e90]: Days in Orbit
+          - generic [ref=f8e91]: "428"
+          - generic [ref=f8e92]: Since first conversation
+        - generic [ref=f8e93]:
+          - generic [ref=f8e94]: Shared Moments
+          - generic [ref=f8e95]: "5"
+          - generic [ref=f8e96]: 3 completed together
+        - generic [ref=f8e97]:
+          - generic [ref=f8e98]: Next Horizon
+          - generic [ref=f8e99]: Big Sur Ridge Stargazing
+          - generic [ref=f8e100]: in 12 days
+      - generic [ref=f8e107]:
+        - generic [ref=f8e108]: This Week's Reflection for Two
+        - paragraph [ref=f8e109]: "\"What is one quiet moment with me recently where you felt completely at peace?\""
+        - text: Answer aloud tonight before sleeping.
+      - generic [ref=f8e110]:
+        - generic [ref=f8e111]:
+          - heading "Moments to Collect 3 / 5" [level=3] [ref=f8e112]:
+            - generic [ref=f8e113]: Moments to Collect
+            - generic [ref=f8e114]: 3 / 5
+          - button "Invite Partner" [ref=f8e115] [cursor=pointer]
+        - generic [ref=f8e120]:
+          - textbox "Add a dream or date idea to your space..." [ref=f8e121]
+          - button "Add" [ref=f8e122] [cursor=pointer]
+        - generic [ref=f8e125]:
+          - generic [ref=f8e126] [cursor=pointer]:
+            - generic [ref=f8e127]: Camp under the Perseid meteor shower at high altitude
+            - generic [ref=f8e132]: Starlit
+          - generic [ref=f8e133] [cursor=pointer]:
+            - generic [ref=f8e134]: Cook handmade tortellini from scratch with aged Chianti
+            - generic [ref=f8e137]: Culinary
+          - generic [ref=f8e138] [cursor=pointer]:
+            - generic [ref=f8e139]: Rent a wooden sailboat and swim in open deep water
+            - generic [ref=f8e142]: Adventurous
+          - generic [ref=f8e143] [cursor=pointer]:
+            - generic [ref=f8e144]: Spend an entire rainy Sunday reading aloud by the fireplace
+            - generic [ref=f8e149]: Intimate
+          - generic [ref=f8e150] [cursor=pointer]:
+            - generic [ref=f8e151]: Stand together on the sunrise cliff edge at the world’s rim
+            - generic [ref=f8e156]: Atmospheric
+    - generic [ref=f8e157]:
+      - generic [ref=f8e158]: End-to-end synchronized for two
+      - button "Leave Space" [ref=f8e163] [cursor=pointer]

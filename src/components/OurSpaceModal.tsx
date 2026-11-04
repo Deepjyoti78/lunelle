@@ -36,31 +36,31 @@ export const OurSpaceModal: React.FC<OurSpaceModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/75 backdrop-blur-md animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/80 backdrop-blur-md animate-fadeIn">
       <div
-        className="relative w-full max-w-4xl max-h-[90vh] bg-[#140F0C] border border-[#F5E5D2]/18 rounded-3xl overflow-hidden shadow-2xl flex flex-col"
+        className="relative w-full max-w-4xl max-h-[92dvh] bg-[#140F0C] border border-[#F5E5D2]/18 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header with Romantic Sanctuary Branding */}
-        <div className="px-6 sm:px-8 py-5 border-b border-[#F5E5D2]/12 flex items-center justify-between bg-[#19130F]/90">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-[#D88B55]/15 border border-[#D88B55]/30 flex items-center justify-center text-[#E2A779]">
-              <Heart size={18} className="fill-[#D88B55]" />
+        <div className="px-4 sm:px-8 py-4 sm:py-5 border-b border-[#F5E5D2]/12 flex items-center justify-between bg-[#19130F]/90">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-[#D88B55]/15 border border-[#D88B55]/30 flex items-center justify-center text-[#E2A779] shrink-0">
+              <Heart size={16} className="fill-[#D88B55]" />
             </div>
             <div>
-              <div className="flex items-center gap-2">
-                <span className="text-[11px] font-mono tracking-widest text-[#D88B55] uppercase">Private Sanctuary</span>
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="text-[10px] sm:text-[11px] font-mono tracking-widest text-[#D88B55] uppercase">Private Sanctuary</span>
                 <span className="text-[#C8B8AA]/40">•</span>
-                <span className="text-[11px] text-[#C8B8AA]">Elena & David’s Orbit</span>
+                <span className="text-[10px] sm:text-[11px] text-[#C8B8AA]">Elena & David’s Orbit</span>
               </div>
-              <h2 className="text-xl sm:text-2xl font-sans font-medium text-[#F5E5D2]">
+              <h2 className="text-lg sm:text-2xl font-sans font-medium text-[#F5E5D2]">
                 Our Space
               </h2>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-full bg-[#F5E5D2]/08 hover:bg-[#F5E5D2]/16 text-[#C8B8AA] hover:text-[#F5E5D2] transition-colors cursor-pointer"
+            className="p-1.5 sm:p-2 rounded-full bg-[#F5E5D2]/08 hover:bg-[#F5E5D2]/16 text-[#C8B8AA] hover:text-[#F5E5D2] transition-colors cursor-pointer"
             aria-label="Close modal"
           >
             <X size={18} />
@@ -68,7 +68,7 @@ export const OurSpaceModal: React.FC<OurSpaceModalProps> = ({
         </div>
 
         {/* Space Body */}
-        <div className="p-6 sm:p-8 overflow-y-auto space-y-6 flex-1">
+        <div className="p-4 sm:p-8 overflow-y-auto space-y-4 sm:space-y-6 flex-1">
           {/* Couple Statistics & Orbit Bar */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="p-4.5 rounded-2xl bg-[#1D1510] border border-[#F5E5D2]/12 flex flex-col justify-between">

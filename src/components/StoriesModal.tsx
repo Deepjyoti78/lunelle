@@ -27,26 +27,26 @@ export const StoriesModal: React.FC<StoriesModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/75 backdrop-blur-md animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/80 backdrop-blur-md animate-fadeIn">
       <div
-        className="relative w-full max-w-4xl max-h-[90vh] bg-[#140F0C] border border-[#F5E5D2]/18 rounded-3xl overflow-hidden shadow-2xl flex flex-col"
+        className="relative w-full max-w-4xl max-h-[92dvh] bg-[#140F0C] border border-[#F5E5D2]/18 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="px-6 sm:px-8 py-5 border-b border-[#F5E5D2]/12 flex items-center justify-between bg-[#19130F]/90">
+        <div className="px-4 sm:px-8 py-4 sm:py-5 border-b border-[#F5E5D2]/12 flex items-center justify-between bg-[#19130F]/90">
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-[11px] font-mono tracking-widest text-[#D88B55] uppercase">Couple Chronicles</span>
+            <div className="flex items-center gap-2 mb-0.5 sm:mb-1">
+              <span className="text-[10px] sm:text-[11px] font-mono tracking-widest text-[#D88B55] uppercase">Couple Chronicles</span>
               <span className="text-[#C8B8AA]/40">•</span>
-              <span className="text-[11px] text-[#C8B8AA]">Human Moments</span>
+              <span className="text-[10px] sm:text-[11px] text-[#C8B8AA]">Human Moments</span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-sans font-medium text-[#F5E5D2]">
+            <h2 className="text-lg sm:text-2xl font-sans font-medium text-[#F5E5D2]">
               Real Couple Stories
             </h2>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-full bg-[#F5E5D2]/08 hover:bg-[#F5E5D2]/16 text-[#C8B8AA] hover:text-[#F5E5D2] transition-colors cursor-pointer"
+            className="p-1.5 sm:p-2 rounded-full bg-[#F5E5D2]/08 hover:bg-[#F5E5D2]/16 text-[#C8B8AA] hover:text-[#F5E5D2] transition-colors cursor-pointer"
             aria-label="Close modal"
           >
             <X size={18} />
@@ -54,7 +54,7 @@ export const StoriesModal: React.FC<StoriesModalProps> = ({
         </div>
 
         {/* Stories List & Detail View */}
-        <div className="p-6 sm:p-8 overflow-y-auto space-y-6 flex-1">
+        <div className="p-4 sm:p-8 overflow-y-auto space-y-4 sm:space-y-6 flex-1">
           {/* Active Featured Reader */}
           <div className="p-6 sm:p-8 rounded-2xl bg-[#1C1410] border border-[#F5E5D2]/16 shadow-lg">
             <div className="flex items-center justify-between flex-wrap gap-2 mb-4">

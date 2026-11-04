@@ -81,15 +81,15 @@ export const BottomChips: React.FC<BottomChipsProps> = ({
   ];
 
   return (
-    <div className="flex items-center gap-3 sm:gap-3.5 overflow-x-auto no-scrollbar py-1 w-full max-w-full flex-nowrap">
+    <div className="flex items-center gap-2.5 sm:gap-3.5 overflow-x-auto no-scrollbar py-1 w-full max-w-full flex-nowrap -mx-5 px-5 sm:mx-0 sm:px-0 scroll-smooth touch-pan-x">
       {chips.map((chip) => (
         <button
           key={chip.id}
           onClick={chip.action}
-          className="group inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full glass-surface text-[#D8CDC2] hover:text-[#F5E5D2] transition-all duration-300 cursor-pointer transform hover:-translate-y-0.5 shrink-0"
+          className="group inline-flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full glass-surface text-[#D8CDC2] hover:text-[#F5E5D2] transition-all duration-300 cursor-pointer transform hover:-translate-y-0.5 shrink-0 select-none active:scale-95"
         >
           {chip.icon}
-          <span className="text-[13px] font-sans font-normal tracking-wide whitespace-nowrap">
+          <span className="text-[12px] sm:text-[13px] font-sans font-normal tracking-wide whitespace-nowrap">
             {chip.label}
           </span>
         </button>

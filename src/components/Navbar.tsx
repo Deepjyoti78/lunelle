@@ -29,20 +29,20 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header className="absolute top-0 left-0 right-0 z-40">
-      <div className="w-full max-w-[1920px] mx-auto px-8 sm:px-12 md:px-16 lg:px-20 py-6 md:py-7 flex items-center justify-between">
+      <div className="w-full max-w-[1920px] mx-auto px-5 sm:px-12 md:px-16 lg:px-20 py-4.5 sm:py-6 md:py-7 flex items-center justify-between">
         {/* Left Side Group: Logo + Left-Shifted Glass Navbar Pill matching Reference 2 */}
-        <div className="flex items-center gap-7 lg:gap-10">
+        <div className="flex items-center gap-6 sm:gap-8 lg:gap-10">
           {/* Brand Logo & Wordmark - Lunelle */}
           <button
             onClick={() => handleNavClick('discover')}
-            className="flex items-center gap-2.5 group cursor-pointer focus:outline-none shrink-0"
+            className="flex items-center gap-2 group cursor-pointer focus:outline-none shrink-0"
             aria-label="Lunelle Homepage"
           >
             {/* 3-wave brandmark matching Reference 2 */}
             <div className="relative flex items-center justify-center text-[#F5E5D2] group-hover:text-white transition-colors">
               <svg
-                width="24"
-                height="18"
+                width="22"
+                height="16"
                 viewBox="0 0 24 18"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 />
               </svg>
             </div>
-            <span className="text-[#F5E5D2] text-[18px] md:text-[19px] font-sans font-medium tracking-normal group-hover:text-white transition-colors">
+            <span className="text-[#F5E5D2] text-[17px] sm:text-[18px] md:text-[19px] font-sans font-medium tracking-normal group-hover:text-white transition-colors">
               Lunelle
             </span>
           </button>
@@ -116,14 +116,14 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="flex md:hidden items-center gap-2">
           <button
             onClick={onOpenOurSpace}
-            className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-[#F5E5D2] text-[#1A120D] text-[12px] font-medium tracking-normal"
+            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#F5E5D2] text-[#1A120D] text-[12px] font-semibold tracking-normal active:scale-95 transition-transform"
           >
             <span>Our Space</span>
             <ArrowUpRight size={12} strokeWidth={2.4} />
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-1.5 rounded-full bg-[#18120E]/70 border border-[#F5E5D2]/20 text-[#F5E5D2] backdrop-blur-md focus:outline-none"
+            className="p-1.5 rounded-full bg-[#18120E]/70 border border-[#F5E5D2]/20 text-[#F5E5D2] backdrop-blur-md focus:outline-none active:scale-95 transition-transform"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X size={17} /> : <Menu size={17} />}
@@ -133,7 +133,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden mx-6 mt-1 p-3 rounded-2xl bg-[#1A130E]/95 border border-[#F5E5D2]/18 backdrop-blur-xl shadow-2xl flex flex-col gap-1 z-50 animate-fadeIn">
+        <div className="md:hidden mx-5 mt-1 p-3 rounded-2xl bg-[#1A130E]/95 border border-[#F5E5D2]/18 backdrop-blur-xl shadow-2xl flex flex-col gap-1 z-50 animate-fadeIn">
           {navItems.map((item) => {
             const isActive = activeTab === item.tab;
             return (
