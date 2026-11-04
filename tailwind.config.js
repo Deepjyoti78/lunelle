@@ -20,12 +20,12 @@ export default {
       },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
-        romantic: ['"Playfair Display"', '"Newsreader"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+        serif: ['"Playfair Display"', '"Instrument Serif"', 'Georgia', 'serif'],
+        romantic: ['"Instrument Serif"', '"Playfair Display"', '"Newsreader"', 'Georgia', 'serif'],
       },
       boxShadow: {
         subtle: "0 4px 20px -2px rgba(0, 0, 0, 0.5)",
-        glassPill: "0 4px 20px -2px rgba(0, 0, 0, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.08)",
+        glassPill: "0 8px 32px 0 rgba(0, 0, 0, 0.42), inset 0 1px 1px 0 rgba(255, 255, 255, 0.08)",
         pillGlow: "0 0 25px -4px rgba(216, 139, 85, 0.18)",
         btnHover: "0 4px 24px rgba(245, 229, 210, 0.3)",
       }
