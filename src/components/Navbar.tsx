@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useLayoutEffect, useEffect } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import type { ActiveTab } from '../types';
 
@@ -14,6 +14,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenOurSpace,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeRect, setActiveRect] = useState<{ left: number; width: number } | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const tabRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
 
   const navItems: { label: string; tab: ActiveTab }[] = [
     { label: 'Discover', tab: 'discover' },
@@ -21,6 +24,32 @@ export const Navbar: React.FC<NavbarProps> = ({
     { label: 'Places', tab: 'places' },
     { label: 'Stories', tab: 'stories' },
   ];
+
+  const updateActiveRect = () => {
+    const activeEl = tabRefs.current[activeTab];
+    const containerEl = containerRef.current;
+    if (activeEl && containerEl) {
+      const containerRect = containerEl.getBoundingClientRect();
+      const elRect = activeEl.getBoundingClientRect();
+      setActiveRect({
+        left: elRect.left - containerRect.left,
+        width: elRect.width,
+      });
+    }
+  };
+
+  useLayoutEffect(() => {
+    updateActiveRect();
+  }, [activeTab]);
+
+  useEffect(() => {
+    window.addEventListener('resize', updateActiveRect);
+    // Double check after fonts load
+    if (document.fonts) {
+      document.fonts.ready.then(updateActiveRect);
+    }
+    return () => window.removeEventListener('resize', updateActiveRect);
+  }, [activeTab]);
 
   const handleNavClick = (tab: ActiveTab) => {
     onSelectTab(tab);
@@ -30,7 +59,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header className="absolute top-0 left-0 right-0 z-40">
       <div className="w-full max-w-[1920px] mx-auto px-5 sm:px-12 md:px-16 lg:px-20 py-4.5 sm:py-6 md:py-7 flex items-center justify-between">
-        {/* Desktop: Single Unified Glass Capsule containing Brand Logo + Nav Items */}
+        {/* Desktop: Single Unified Glass Capsule containing Brand Logo + Animated Nav Items */}
         <nav
           aria-label="Main Navigation"
           className="hidden md:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full glass-surface shadow-[0_8px_32px_rgba(0,0,0,0.45)]"
@@ -79,18 +108,32 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Subtle separator line between brand and links */}
           <div className="w-[1px] h-3.5 bg-[#F5E5D2]/18 mx-1 shrink-0" />
 
-          {/* Nav Items */}
-          <div className="flex items-center gap-1">
+          {/* Nav Items Container with Smooth Animated Sliding Pill */}
+          <div ref={containerRef} className="relative flex items-center gap-1">
+            {/* Smooth animated active pill that slides between tabs */}
+            {activeRect && (
+              <div
+                className="absolute top-0 bottom-0 rounded-full glass-pill-active pointer-events-none transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] shadow-[0_2px_10px_rgba(216,139,85,0.18)]"
+                style={{
+                  transform: `translateX(${activeRect.left}px)`,
+                  width: `${activeRect.width}px`,
+                }}
+              />
+            )}
+
             {navItems.map((item) => {
               const isActive = activeTab === item.tab;
               return (
                 <button
                   key={item.tab}
+                  ref={(el) => {
+                    tabRefs.current[item.tab] = el;
+                  }}
                   onClick={() => handleNavClick(item.tab)}
-                  className={`px-4 sm:px-4.5 py-1.5 rounded-full text-[13px] font-sans transition-all duration-200 cursor-pointer whitespace-nowrap ${
+                  className={`relative z-10 px-4 sm:px-4.5 py-1.5 rounded-full text-[13px] font-sans transition-colors duration-200 cursor-pointer whitespace-nowrap ${
                     isActive
-                      ? 'glass-pill-active font-medium text-[#F5E5D2]'
-                      : 'text-[#C4B5A5] hover:text-[#F5E5D2] hover:bg-[#F5E5D2]/08 font-normal'
+                      ? 'font-medium text-[#F5E5D2]'
+                      : 'text-[#C4B5A5] hover:text-[#F5E5D2] font-normal'
                   }`}
                 >
                   {item.label}
@@ -143,7 +186,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="hidden md:flex items-center">
           <button
             onClick={onOpenOurSpace}
-            className="group inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#F5E5D2] text-[#1A120D] text-[13px] font-semibold tracking-normal hover:bg-[#FFF5E8] hover:shadow-[0_0_24px_rgba(245,229,210,0.35)] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer shadow-[0_2px_10px_rgba(0,0,0,0.25)]"
+            className="group inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#F5E5D2] text-[#1A120D] text-[13px] font-semibold tracking-normal hover:bg-[#FFF5E8] hover:shadow-[0_0_24px_rgba(245,229,210,0.35)] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer shadow-[0_2px_10px_rgba(0,0,0,0.25)] active:scale-95"
           >
             <span>Our Space</span>
             <ArrowUpRight
