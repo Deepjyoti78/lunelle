@@ -20,7 +20,7 @@ export default {
       },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+        serif: ['"Instrument Serif"', '"Cormorant Garamond"', 'Georgia', 'serif'],
         instrument: ['"Instrument Serif"', 'Georgia', 'serif'],
         cormorant: ['"Cormorant Garamond"', 'Georgia', 'serif'],
         romantic: ['"Instrument Serif"', 'Georgia', 'serif'],
