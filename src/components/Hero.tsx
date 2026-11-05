@@ -73,18 +73,18 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
           </div>
 
-          {/* Heading: Explore, plan, and / collect moments together. (Restrained, elegant, editorial) */}
-          <h1 className="text-[28px] xs:text-[32px] sm:text-[38px] md:text-[42px] lg:text-[45px] font-cormorant font-medium text-[#F5E5D2] leading-[1.12] tracking-[-0.01em] mb-3.5 sm:mb-4.5">
+          {/* Heading: Explore, plan, and / collect moments together. (Matching Image 2 Instrument Serif design) */}
+          <h1 className="text-[34px] xs:text-[40px] sm:text-[48px] md:text-[54px] lg:text-[58px] font-serif font-normal text-[#F5E5D2] leading-[1.08] tracking-[-0.015em] mb-4 sm:mb-5">
             Explore, plan, and
             <br />
             collect moments{' '}
-            <span className="font-romantic italic font-normal text-[34px] xs:text-[40px] sm:text-[46px] md:text-[50px] lg:text-[54px] text-[#F5E5D2] leading-none inline-block ml-0.5 sm:ml-1 align-baseline">
+            <span className="italic font-normal text-[36px] xs:text-[42px] sm:text-[50px] md:text-[56px] lg:text-[62px] text-[#F5E5D2] leading-none inline-block ml-0.5 sm:ml-1 align-baseline">
               together.
             </span>
           </h1>
 
           {/* Description */}
-          <p className="text-[13.5px] sm:text-[14.5px] md:text-[15px] text-[#C4B5A5] font-sans font-normal leading-[1.6] sm:leading-[1.65] max-w-[460px] mb-6 sm:mb-8">
+          <p className="text-[14px] sm:text-[15px] md:text-[15.5px] text-[#C4B5A5] font-sans font-normal leading-[1.62] sm:leading-[1.68] max-w-[480px] mb-6 sm:mb-8">
             Discover date ideas, beautiful places, and experiences
             <br className="hidden xs:inline" />
             {' '}made for two.
@@ -92,14 +92,12 @@ export const Hero: React.FC<HeroProps> = ({
 
           {/* CTAs */}
           <div className="flex items-center gap-4 sm:gap-7 flex-wrap">
-            {/* Primary CTA - Glassmorphism style matching Calyra & Image 2 (No arrow, bigger text, compact button) */}
+            {/* Primary CTA - Warm Cream Pill matching Image 2 */}
             <button
               onClick={onStartExploring}
-              className="group inline-flex items-center justify-center px-6 sm:px-7 py-2.5 sm:py-3 rounded-full glass-cta transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer active:scale-95 shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
+              className="group inline-flex items-center justify-center px-6 sm:px-7 py-2.5 sm:py-3 rounded-full bg-[#F5E5D2] text-[#16100B] text-[13.5px] sm:text-[14px] font-semibold tracking-normal hover:bg-[#FFF5E8] hover:shadow-[0_0_28px_rgba(245,229,210,0.35)] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer shadow-[0_2px_12px_rgba(0,0,0,0.22)] active:scale-95"
             >
-              <span className="text-[15.5px] sm:text-[16.5px] font-sans font-medium tracking-normal text-[#F5E5D2] group-hover:text-white transition-colors">
-                Start Exploring
-              </span>
+              <span>Start Exploring</span>
             </button>
 
             {/* Secondary CTA: Watch the Story */}

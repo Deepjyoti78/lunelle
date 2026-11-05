@@ -30,15 +30,12 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header className="absolute top-0 left-0 right-0 z-40">
       <div className="w-full max-w-[1920px] mx-auto px-5 sm:px-12 md:px-16 lg:px-20 py-4.5 sm:py-6 md:py-7 flex items-center justify-between">
-        {/* Desktop: Unified Glass Navbar Pill containing Logo + Nav Links (spacious, elegant, no overlapping) */}
-        <nav
-          aria-label="Main Navigation"
-          className="hidden md:inline-flex items-center gap-2 px-2.5 py-1.5 rounded-full glass-surface shadow-[0_8px_32px_rgba(0,0,0,0.45)]"
-        >
-          {/* Brand Logo & Wordmark - Inside the Navbar Pill */}
+        {/* Desktop: Brand Capsule + Navigation Capsule (Exactly matching Reference Image 2) */}
+        <div className="hidden md:flex items-center gap-3.5">
+          {/* Brand Logo & Wordmark Capsule */}
           <button
             onClick={() => handleNavClick('discover')}
-            className="flex items-center gap-2.5 pl-3.5 pr-4 py-2 rounded-full text-[#F5E5D2] hover:text-white transition-all cursor-pointer group focus:outline-none shrink-0"
+            className="inline-flex items-center gap-2.5 px-4.5 py-2 rounded-full glass-surface text-[#F5E5D2] hover:text-white transition-all cursor-pointer group focus:outline-none shrink-0 shadow-[0_4px_20px_rgba(0,0,0,0.35)]"
             aria-label="Lunelle Home"
           >
             {/* 3-wave brandmark */}
@@ -71,16 +68,16 @@ export const Navbar: React.FC<NavbarProps> = ({
                 />
               </svg>
             </div>
-            <span className="text-[#F5E5D2] text-[15px] font-sans font-medium tracking-normal group-hover:text-white transition-colors">
+            <span className="text-[#F5E5D2] text-[15.5px] font-sans font-medium tracking-normal group-hover:text-white transition-colors">
               Lunelle
             </span>
           </button>
 
-          {/* Subtle separator */}
-          <div className="w-[1px] h-4 bg-[#F5E5D2]/16 mx-1 shrink-0" />
-
-          {/* Nav Items - Generous padding and spacing */}
-          <div className="flex items-center gap-1.5 pr-1">
+          {/* Navigation Capsule */}
+          <nav
+            aria-label="Main Navigation"
+            className="inline-flex items-center gap-1.5 p-1.5 rounded-full glass-surface shadow-[0_4px_20px_rgba(0,0,0,0.35)]"
+          >
             {navItems.map((item) => {
               const isActive = activeTab === item.tab;
               return (
@@ -97,8 +94,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </button>
               );
             })}
-          </div>
-        </nav>
+          </nav>
+        </div>
 
         {/* Mobile Header Brand Pill (left side on mobile) */}
         <div className="flex md:hidden items-center">
