@@ -49,30 +49,30 @@ export const WatchStoryModal: React.FC<WatchStoryModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/85 backdrop-blur-xl animate-fadeIn">
       <div
-        className="relative w-full max-w-4xl bg-[#120E0B] border border-[#F5E5D2]/20 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col"
+        className="relative w-full max-w-4xl bg-[#120E0B] border border-white/[0.07] rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.85)] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Cinematic Header */}
-        <div className="px-4 sm:px-6 py-3.5 sm:py-4 border-b border-[#F5E5D2]/10 flex items-center justify-between bg-[#18110D]/80">
+        <div className="px-4 sm:px-6 py-3.5 sm:py-4 border-b border-white/[0.06] flex items-center justify-between bg-[#18110D]/80">
           <div className="flex items-center gap-2">
-            <span className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-[#D88B55] flex items-center gap-1.5">
+            <span className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-[#D88B55] flex items-center gap-1.5 font-medium">
               <Sparkles size={12} /> Cinematic Prelude
             </span>
-            <span className="text-[#C8B8AA]/40">•</span>
-            <span className="text-[10px] sm:text-xs text-[#C8B8AA]">The Philosophy of Lunelle</span>
+            <span className="text-[#A8988A]/40">•</span>
+            <span className="text-[10px] sm:text-xs text-[#A8988A]">The Philosophy of Lunelle</span>
           </div>
 
           <div className="flex items-center gap-2.5 sm:gap-3">
             <button
               onClick={() => setIsMuted(!isMuted)}
-              className="p-1.5 sm:p-2 rounded-full bg-[#F5E5D2]/08 hover:bg-[#F5E5D2]/16 text-[#C8B8AA] hover:text-[#F5E5D2] transition-colors cursor-pointer"
+              className="p-1.5 sm:p-2 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-[#C8B8AA] hover:text-[#F5E5D2] transition-colors cursor-pointer"
               aria-label="Toggle ambient audio"
             >
               {isMuted ? <VolumeX size={15} /> : <Volume2 size={15} />}
             </button>
             <button
               onClick={onClose}
-              className="p-1.5 sm:p-2 rounded-full bg-[#F5E5D2]/08 hover:bg-[#F5E5D2]/16 text-[#C8B8AA] hover:text-[#F5E5D2] transition-colors cursor-pointer"
+              className="p-1.5 sm:p-2 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-[#C8B8AA] hover:text-[#F5E5D2] transition-colors cursor-pointer"
               aria-label="Close story"
             >
               <X size={17} />

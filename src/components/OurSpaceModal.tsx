@@ -356,45 +356,45 @@ export const OurSpaceModal: React.FC<OurSpaceModalProps> = ({
             <div className="p-4 sm:p-8 space-y-6">
               {/* Couple Stats Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
-                <div className="p-4 rounded-2xl bg-[#1D1612]/70 border border-[#F5E5D2]/10">
-                  <div className="flex items-center gap-2 text-[#D88B55] text-xs font-mono uppercase mb-1">
+                <div className="p-4 rounded-2xl bg-[#1D1612] border border-white/[0.04]">
+                  <div className="flex items-center gap-2 text-[#D88B55] text-xs font-mono uppercase mb-1 font-medium">
                     <Calendar size={13} /> Days Together
                   </div>
                   <div className="text-2xl font-serif text-[#F5E5D2]">842 Days</div>
-                  <div className="text-[11px] text-[#C8B8AA] mt-1">Since June 14, 2024</div>
+                  <div className="text-[11px] text-[#A8988A] mt-1">Since June 14, 2024</div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#1D1612]/70 border border-[#F5E5D2]/10">
-                  <div className="flex items-center gap-2 text-[#D88B55] text-xs font-mono uppercase mb-1">
+                <div className="p-4 rounded-2xl bg-[#1D1612] border border-white/[0.04]">
+                  <div className="flex items-center gap-2 text-[#D88B55] text-xs font-mono uppercase mb-1 font-medium">
                     <Sparkles size={13} /> Shared Milestones
                   </div>
                   <div className="text-2xl font-serif text-[#F5E5D2]">28 Saved</div>
-                  <div className="text-[11px] text-[#C8B8AA] mt-1">12 dates completed</div>
+                  <div className="text-[11px] text-[#A8988A] mt-1">12 dates completed</div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#1D1612]/70 border border-[#F5E5D2]/10">
-                  <div className="flex items-center gap-2 text-[#D88B55] text-xs font-mono uppercase mb-1">
+                <div className="p-4 rounded-2xl bg-[#1D1612] border border-white/[0.04]">
+                  <div className="flex items-center gap-2 text-[#D88B55] text-xs font-mono uppercase mb-1 font-medium">
                     <Heart size={13} /> Connection State
                   </div>
                   <div className="text-2xl font-serif text-[#F5E5D2]">In Sync</div>
-                  <div className="text-[11px] text-[#C8B8AA] mt-1">Both online in Orbit</div>
+                  <div className="text-[11px] text-[#A8988A] mt-1">Both online in Orbit</div>
                 </div>
               </div>
 
               {/* Shared Bucket List */}
-              <div className="p-5 rounded-2xl bg-[#19130F]/80 border border-[#F5E5D2]/12">
+              <div className="p-5 rounded-2xl bg-[#19130F] border border-white/[0.05]">
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <h3 className="text-base font-sans font-medium text-[#F5E5D2]">
                       Shared Bucket List
                     </h3>
-                    <p className="text-xs text-[#C8B8AA]">
+                    <p className="text-xs text-[#A8988A]">
                       Dream experiences and date ideas saved together
                     </p>
                   </div>
                   <button
                     onClick={handleCopyInvite}
-                    className="text-xs px-3 py-1.5 rounded-full bg-[#F5E5D2]/10 hover:bg-[#F5E5D2]/18 text-[#F5E5D2] transition-colors cursor-pointer"
+                    className="text-xs px-3 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-[#F5E5D2] transition-colors cursor-pointer"
                   >
                     {partnerCopied ? 'Link Copied!' : 'Invite Partner'}
                   </button>
@@ -407,7 +407,7 @@ export const OurSpaceModal: React.FC<OurSpaceModalProps> = ({
                     value={newItemText}
                     onChange={(e) => setNewItemText(e.target.value)}
                     placeholder="Add an experience made for two..."
-                    className="flex-1 px-4 py-2 rounded-xl bg-[#120D0A] border border-[#F5E5D2]/15 text-xs text-[#F5E5D2] placeholder-[#C8B8AA]/50 focus:outline-none focus:border-[#D88B55]"
+                    className="flex-1 px-4 py-2 rounded-xl bg-[#120D0A] border border-white/[0.06] text-xs text-[#F5E5D2] placeholder-[#A8988A]/50 focus:outline-none focus:border-[#D88B55]"
                   />
                   <button
                     type="submit"
@@ -423,14 +423,14 @@ export const OurSpaceModal: React.FC<OurSpaceModalProps> = ({
                     <div
                       key={item.id}
                       onClick={() => onToggleBucketItem(item.id)}
-                      className="flex items-center justify-between p-3 rounded-xl bg-[#140F0C] border border-[#F5E5D2]/08 hover:border-[#F5E5D2]/20 cursor-pointer transition-colors"
+                      className="flex items-center justify-between p-3 rounded-xl bg-[#140F0C] border border-white/[0.04] hover:bg-[#1D1612] cursor-pointer transition-colors"
                     >
                       <div className="flex items-center gap-3">
                         <div
                           className={`w-5 h-5 rounded-full border flex items-center justify-center transition-colors ${
                             item.completed
                               ? 'bg-[#D88B55] border-[#D88B55] text-[#100D0B]'
-                              : 'border-[#F5E5D2]/30 text-transparent'
+                              : 'border-white/20 text-transparent'
                           }`}
                         >
                           <Check size={12} strokeWidth={2.6} />
@@ -438,7 +438,7 @@ export const OurSpaceModal: React.FC<OurSpaceModalProps> = ({
                         <span
                           className={`text-xs font-sans ${
                             item.completed
-                              ? 'line-through text-[#C8B8AA]/50'
+                              ? 'line-through text-[#A8988A]/50'
                               : 'text-[#F5E5D2]'
                           }`}
                         >
