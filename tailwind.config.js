@@ -20,8 +20,9 @@ export default {
       },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        serif: ['"Playfair Display"', '"Instrument Serif"', 'Georgia', 'serif'],
-        romantic: ['"Instrument Serif"', '"Playfair Display"', '"Newsreader"', 'Georgia', 'serif'],
+        serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
+        cormorant: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        romantic: ['"Instrument Serif"', '"Cormorant Garamond"', 'Georgia', 'serif'],
       },
       boxShadow: {
         subtle: "0 4px 20px -2px rgba(0, 0, 0, 0.5)",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Play } from 'lucide-react';
+import { Play } from 'lucide-react';
 import { BottomChips } from './BottomChips';
 import type { ActiveTab } from '../types';
 
@@ -64,43 +64,42 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="relative z-10 w-full h-full flex flex-col justify-between px-5 sm:px-12 md:px-16 lg:px-20 pt-20 sm:pt-28 md:pt-34 pb-6 sm:pb-10 max-w-[1920px] mx-auto">
         {/* Left Hero Content - Lifted up into the starry sky matching Reference 2 */}
         <div className="max-w-[620px] my-auto -translate-y-2 sm:-translate-y-6 lg:-translate-y-8">
-          {/* Eyebrow: A SPACE FOR TWO */}
-          <div className="mb-2.5 sm:mb-4">
-            <span className="text-[10.5px] sm:text-[12px] font-sans font-medium uppercase tracking-[0.22em] sm:tracking-[0.26em] text-[#C0B0A0]">
-              A SPACE FOR TWO
-            </span>
+          {/* Eyebrow: A SPACE FOR TWO (Calyra-style Frosted Pill Badge) */}
+          <div className="mb-3.5 sm:mb-4.5">
+            <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full bg-[#F5E5D2]/[0.08] border border-[#F5E5D2]/[0.2] backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.08)]">
+              <span className="text-[10px] sm:text-[11px] font-sans font-medium uppercase tracking-[0.24em] text-[#D8CDC2]">
+                A SPACE FOR TWO
+              </span>
+            </div>
           </div>
 
-          {/* Heading: Explore, plan, and / collect moments together. */}
-          <h1 className="text-[28px] xs:text-[32px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-sans font-normal text-[#F5E5D2] leading-[1.14] tracking-[-0.015em] mb-3.5 sm:mb-4.5">
+          {/* Heading: Explore, plan, and / collect moments together. (Matching Image 2 editorial serif design) */}
+          <h1 className="text-[36px] xs:text-[42px] sm:text-[50px] md:text-[56px] lg:text-[62px] font-cormorant font-medium text-[#F5E5D2] leading-[1.08] tracking-[-0.01em] mb-4 sm:mb-5">
             Explore, plan, and
             <br />
             collect moments{' '}
-            <span className="font-romantic italic font-normal text-[36px] xs:text-[42px] sm:text-[54px] md:text-[60px] lg:text-[64px] text-[#F5E5D2] leading-none inline-block ml-0.5 sm:ml-1 align-baseline">
+            <span className="font-romantic italic font-normal text-[46px] xs:text-[54px] sm:text-[64px] md:text-[70px] lg:text-[76px] text-[#F5E5D2] leading-none inline-block ml-0.5 sm:ml-1 align-baseline">
               together.
             </span>
           </h1>
 
           {/* Description */}
-          <p className="text-[13.5px] sm:text-[15.5px] md:text-[16px] text-[#C4B5A5] font-sans font-normal leading-[1.58] sm:leading-[1.65] max-w-[480px] mb-6 sm:mb-9">
+          <p className="text-[14px] sm:text-[15.5px] md:text-[16px] text-[#C4B5A5] font-sans font-normal leading-[1.62] sm:leading-[1.68] max-w-[490px] mb-6 sm:mb-9">
             Discover date ideas, beautiful places, and experiences
             <br className="hidden xs:inline" />
             {' '}made for two.
           </p>
 
           {/* CTAs */}
-          <div className="flex items-center gap-3.5 sm:gap-7 flex-wrap">
-            {/* Primary CTA */}
+          <div className="flex items-center gap-4 sm:gap-7 flex-wrap">
+            {/* Primary CTA - Glassmorphism style matching Calyra & Image 2 (No arrow, bigger text, compact button) */}
             <button
               onClick={onStartExploring}
-              className="group inline-flex items-center gap-2 px-5 sm:px-7 py-2.5 sm:py-3.5 rounded-full bg-[#F5E5D2] text-[#16100B] text-[13px] sm:text-[14px] font-semibold tracking-normal hover:bg-[#FFF5E8] hover:shadow-[0_0_28px_rgba(245,229,210,0.35)] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer shadow-[0_2px_12px_rgba(0,0,0,0.22)] active:scale-95"
+              className="group inline-flex items-center justify-center px-6 sm:px-7 py-2.5 sm:py-3 rounded-full glass-cta transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer active:scale-95 shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
             >
-              <span>Start Exploring</span>
-              <ArrowRight
-                size={14}
-                strokeWidth={2.4}
-                className="transition-transform duration-200 group-hover:translate-x-1"
-              />
+              <span className="text-[15.5px] sm:text-[16.5px] font-sans font-medium tracking-normal text-[#F5E5D2] group-hover:text-white transition-colors">
+                Start Exploring
+              </span>
             </button>
 
             {/* Secondary CTA: Watch the Story */}
