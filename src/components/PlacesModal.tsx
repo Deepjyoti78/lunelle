@@ -24,9 +24,9 @@ export const PlacesModal: React.FC<PlacesModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/80 backdrop-blur-md animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/80 backdrop-blur-md animate-backdropFade">
       <div
-        className="relative w-full max-w-4xl max-h-[92dvh] bg-[#140F0C] border border-white/[0.07] rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.85)] flex flex-col"
+        className="relative w-full max-w-4xl max-h-[92dvh] bg-[#140F0C] border border-white/[0.07] rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.85)] flex flex-col animate-modalZoomIn"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -53,12 +53,13 @@ export const PlacesModal: React.FC<PlacesModalProps> = ({
         {/* Content Body */}
         <div className="p-4 sm:p-8 overflow-y-auto space-y-4 sm:space-y-6 flex-1">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {PLACES_TO_EXPLORE.map((place) => {
+            {PLACES_TO_EXPLORE.map((place, index) => {
               const isSaved = savedPlaces.has(place.id);
               return (
                 <div
                   key={place.id}
-                  className="rounded-2xl bg-[#1B1410] border border-white/[0.04] hover:border-white/[0.08] overflow-hidden group transition-all duration-300 flex flex-col justify-between shadow-sm"
+                  style={{ animationDelay: `${index * 80}ms` }}
+                  className="rounded-2xl bg-[#1B1410] border border-white/[0.04] hover:border-white/[0.08] overflow-hidden group transition-all duration-300 flex flex-col justify-between shadow-sm animate-cardFadeUp hover:-translate-y-1"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img

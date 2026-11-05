@@ -27,9 +27,9 @@ export const StoriesModal: React.FC<StoriesModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/80 backdrop-blur-md animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/80 backdrop-blur-md animate-backdropFade">
       <div
-        className="relative w-full max-w-4xl max-h-[92dvh] bg-[#140F0C] border border-white/[0.07] rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.85)] flex flex-col"
+        className="relative w-full max-w-4xl max-h-[92dvh] bg-[#140F0C] border border-white/[0.07] rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.85)] flex flex-col animate-modalZoomIn"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -56,52 +56,66 @@ export const StoriesModal: React.FC<StoriesModalProps> = ({
         {/* Stories List & Detail View */}
         <div className="p-4 sm:p-8 overflow-y-auto space-y-4 sm:space-y-6 flex-1">
           {/* Active Featured Reader */}
-          <div className="p-6 sm:p-8 rounded-2xl bg-[#1B1410] border border-white/[0.04] shadow-sm">
-            <div className="flex items-center justify-between flex-wrap gap-2 mb-4">
-              <div className="flex items-center gap-3">
-                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#D88B55]/15 text-[#E2A779]">
+          <div className="rounded-2xl bg-[#1B1410] border border-white/[0.04] shadow-sm overflow-hidden animate-fadeIn">
+            {/* Story Image Hero Banner */}
+            <div className="relative h-44 sm:h-60 w-full overflow-hidden">
+              <img
+                src={activeStory.image}
+                alt={activeStory.title}
+                className="w-full h-full object-cover object-center filter brightness-90 transition-transform duration-700 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1B1410] via-[#1B1410]/20 to-transparent" />
+              <div className="absolute top-4 left-4 flex items-center gap-2">
+                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#100D0B]/85 text-[#E2A779] backdrop-blur-md">
                   {activeStory.couple}
                 </span>
-                <span className="text-xs text-[#A8988A] flex items-center gap-1">
-                  <MapPin size={11} /> {activeStory.location}
-                </span>
-                <span className="text-xs text-[#A8988A] flex items-center gap-1">
-                  <Calendar size={11} /> {activeStory.yearsTogether}
+                <span className="px-3 py-1 rounded-full text-xs text-[#E0D4C8] bg-[#100D0B]/75 backdrop-blur-md flex items-center gap-1 font-medium">
+                  <MapPin size={11} className="text-[#D88B55]" /> {activeStory.location}
                 </span>
               </div>
-
-              <button
-                onClick={() => toggleLike(activeStory.id)}
-                className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs transition-colors cursor-pointer font-medium ${
-                  likedStories.has(activeStory.id)
-                    ? 'bg-rose-500/20 text-rose-300'
-                    : 'bg-white/[0.06] text-[#C8B8AA] hover:text-[#F5E5D2]'
-                }`}
-              >
-                <Heart size={12} className={likedStories.has(activeStory.id) ? 'fill-rose-400' : ''} />
-                <span>{likedStories.has(activeStory.id) ? 'Cherished' : 'Cherish story'}</span>
-              </button>
             </div>
 
-            <h3 className="text-2xl sm:text-3xl font-serif italic text-[#F5E5D2] mb-4">
-              "{activeStory.title}"
-            </h3>
+            <div className="p-6 sm:p-8 pt-4">
+              <div className="flex items-center justify-between flex-wrap gap-2 mb-4">
+                <div className="flex items-center gap-3">
+                  <span className="text-xs text-[#A8988A] flex items-center gap-1">
+                    <Calendar size={11} className="text-[#D88B55]" /> {activeStory.yearsTogether}
+                  </span>
+                </div>
 
-            {/* Pull Quote */}
-            <div className="my-5 p-4 rounded-xl bg-[#251A13]/60 border-l-2 border-[#D88B55] flex items-start gap-3">
-              <Quote size={20} className="text-[#D88B55] shrink-0 mt-0.5" />
-              <p className="text-[15px] sm:text-[16px] text-[#F5E5D2] font-serif italic leading-relaxed">
-                {activeStory.quote}
+                <button
+                  onClick={() => toggleLike(activeStory.id)}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs transition-colors cursor-pointer font-medium ${
+                    likedStories.has(activeStory.id)
+                      ? 'bg-rose-500/20 text-rose-300'
+                      : 'bg-white/[0.06] text-[#C8B8AA] hover:text-[#F5E5D2]'
+                  }`}
+                >
+                  <Heart size={12} className={likedStories.has(activeStory.id) ? 'fill-rose-400' : ''} />
+                  <span>{likedStories.has(activeStory.id) ? 'Cherished' : 'Cherish story'}</span>
+                </button>
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl font-serif italic text-[#F5E5D2] mb-4">
+                "{activeStory.title}"
+              </h3>
+
+              {/* Pull Quote */}
+              <div className="my-5 p-4 rounded-xl bg-[#251A13]/60 border-l-2 border-[#D88B55] flex items-start gap-3">
+                <Quote size={20} className="text-[#D88B55] shrink-0 mt-0.5" />
+                <p className="text-[15px] sm:text-[16px] text-[#F5E5D2] font-serif italic leading-relaxed">
+                  {activeStory.quote}
+                </p>
+              </div>
+
+              <p className="text-[14.5px] text-[#C4B5A5] leading-relaxed mb-4">
+                {activeStory.excerpt}
+              </p>
+
+              <p className="text-[14.5px] text-[#E0D4C8] leading-relaxed font-sans">
+                {activeStory.fullStory}
               </p>
             </div>
-
-            <p className="text-[14.5px] text-[#C4B5A5] leading-relaxed mb-4">
-              {activeStory.excerpt}
-            </p>
-
-            <p className="text-[14.5px] text-[#E0D4C8] leading-relaxed font-sans">
-              {activeStory.fullStory}
-            </p>
           </div>
 
           {/* Story Selector Cards */}
@@ -112,15 +126,18 @@ export const StoriesModal: React.FC<StoriesModalProps> = ({
                 <button
                   key={s.id}
                   onClick={() => setActiveStory(s)}
-                  className={`p-4 rounded-xl text-left transition-all cursor-pointer ${
+                  className={`p-3.5 rounded-xl text-left transition-all cursor-pointer flex items-center gap-3.5 ${
                     activeStory.id === s.id
                       ? 'bg-[#281B14] shadow-md border border-[#D88B55]/50'
                       : 'bg-[#18120E] border border-white/[0.04] hover:bg-[#201712]'
                   }`}
                 >
-                  <div className="text-xs text-[#E2A779] font-semibold mb-1">{s.couple}</div>
-                  <div className="text-sm font-medium text-[#F5E5D2] line-clamp-1">{s.title}</div>
-                  <div className="text-xs text-[#A8988A] mt-1">{s.location}</div>
+                  <img src={s.image} alt={s.title} className="w-13 h-13 rounded-lg object-cover shrink-0" />
+                  <div className="min-w-0">
+                    <div className="text-xs text-[#E2A779] font-semibold mb-0.5">{s.couple}</div>
+                    <div className="text-sm font-medium text-[#F5E5D2] truncate">{s.title}</div>
+                    <div className="text-xs text-[#A8988A] mt-0.5">{s.location}</div>
+                  </div>
                 </button>
               ))}
             </div>

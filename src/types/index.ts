@@ -9,6 +9,7 @@ export interface DateIdea {
   vibe: string;
   rating: number;
   featured?: boolean;
+  image?: string;
 }
 
 export interface Place {

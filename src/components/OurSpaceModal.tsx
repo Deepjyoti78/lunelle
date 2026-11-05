@@ -78,12 +78,12 @@ export const OurSpaceModal: React.FC<OurSpaceModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md animate-backdropFade"
       onClick={onClose}
     >
       {/* Main Modal Card */}
       <div
-        className="relative w-full max-w-4xl max-h-[92dvh] bg-[#130E0B] border border-white/[0.07] rounded-3xl overflow-hidden shadow-[0_30px_90px_rgba(0,0,0,0.92)] flex flex-col"
+        className="relative w-full max-w-4xl max-h-[92dvh] bg-[#130E0B] border border-white/[0.07] rounded-3xl overflow-hidden shadow-[0_30px_90px_rgba(0,0,0,0.92)] flex flex-col animate-modalZoomIn"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Floating Minimal Close Button */}

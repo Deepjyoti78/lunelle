@@ -20,18 +20,21 @@ export const WatchStoryModal: React.FC<WatchStoryModalProps> = ({
       title: 'In a cosmos of eight billion souls',
       text: 'We spend our lives navigating vast, solitary spaces. Until one day, someone looks at the same horizon and chooses to stand beside you.',
       time: '0:08',
+      image: '/download (57).jpg',
     },
     {
       act: 'Act II • The Quiet Hours',
       title: 'Moments are not found. They are collected.',
       text: 'A cup of black coffee split at sunrise. Two hours spent listening to old vinyl in candlelight without speaking. The unspoken assurance of a hand reaching across the seat.',
       time: '0:18',
+      image: '/703476404338919012.jpg',
     },
     {
       act: 'Act III • The Edge',
       title: 'A sanctuary built for two',
       text: 'Lunelle was made so you never run out of horizons to chase together. From the high cliffs of Big Sur to quiet rooftops under amber skies.',
       time: '0:30',
+      image: '/download (58).jpg',
     },
   ];
 
@@ -47,9 +50,9 @@ export const WatchStoryModal: React.FC<WatchStoryModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/85 backdrop-blur-xl animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/85 backdrop-blur-xl animate-backdropFade">
       <div
-        className="relative w-full max-w-4xl bg-[#120E0B] border border-white/[0.07] rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.85)] flex flex-col"
+        className="relative w-full max-w-4xl bg-[#120E0B] border border-white/[0.07] rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.85)] flex flex-col animate-modalZoomIn"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Cinematic Header */}
@@ -82,15 +85,21 @@ export const WatchStoryModal: React.FC<WatchStoryModalProps> = ({
 
         {/* Cinematic Stage */}
         <div className="relative h-[360px] sm:h-[440px] md:h-[480px] overflow-hidden flex items-center justify-center">
-          {/* Background Image with slow cinematic zoom */}
+          {/* Background Image with slow cinematic zoom and cross-fade */}
           <div className="absolute inset-0 z-0">
-            <img
-              src="/a_cinematic_wide_landscape_image_16_9_of_the_sam.png"
-              alt="Cinematic background"
-              className="w-full h-full object-cover scale-105 animate-pulse duration-[12000ms]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#120E0B] via-[#120E0B]/60 to-[#120E0B]/40" />
-            <div className="absolute inset-0 bg-[#100D0B]/30 backdrop-blur-[2px]" />
+            {narrativeFrames.map((frame, index) => (
+              <img
+                key={frame.act}
+                src={frame.image}
+                alt={frame.title}
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+                  activeFrame === index ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
+                }`}
+                style={{ transitionProperty: 'opacity, transform', transitionDuration: '1000ms' }}
+              />
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#120E0B] via-[#120E0B]/70 to-[#120E0B]/40" />
+            <div className="absolute inset-0 bg-[#100D0B]/30 backdrop-blur-[1px]" />
           </div>
 
           {/* Center Story Copy */}

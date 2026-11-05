@@ -9,7 +9,8 @@ export const DATE_IDEAS: DateIdea[] = [
     duration: '3 hours',
     vibe: 'Atmospheric & Deep',
     rating: 4.9,
-    featured: true
+    featured: true,
+    image: '/download (57).jpg'
   },
   {
     id: 'candlelit-listening',
@@ -19,7 +20,8 @@ export const DATE_IDEAS: DateIdea[] = [
     duration: '2 hours',
     vibe: 'Slow & Nostalgic',
     rating: 4.9,
-    featured: true
+    featured: true,
+    image: '/1101552390136306348.jpg'
   },
   {
     id: 'secret-rooftop-picnic',
@@ -38,7 +40,8 @@ export const DATE_IDEAS: DateIdea[] = [
     duration: '3.5 hours',
     vibe: 'Ethereal & Magical',
     rating: 5.0,
-    featured: true
+    featured: true,
+    image: '/download (58).jpg'
   },
   {
     id: 'ceramic-touch',
@@ -56,7 +59,9 @@ export const DATE_IDEAS: DateIdea[] = [
     description: 'Wake up before the sun. Walk through dew-soaked redwoods with a thermos of pour-over coffee while the world is still asleep.',
     duration: '2 hours',
     vibe: 'Peaceful & Grounding',
-    rating: 4.9
+    rating: 4.9,
+    featured: true,
+    image: '/703476404338919012.jpg'
   }
 ];
 
@@ -69,7 +74,7 @@ export const PLACES_TO_EXPLORE: Place[] = [
     description: 'A dramatic cliffside terrace perched 800 feet above the crashing waves. At sunset, the golden rays ignite the coastal fog in tones of amber and copper.',
     atmosphere: 'Cinematic, Wild, Vast',
     bestTime: 'October – April at Twilight',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80'
+    image: '/download (57).jpg'
   },
   {
     id: 'kyoto-lantern-path',
@@ -79,7 +84,7 @@ export const PLACES_TO_EXPLORE: Place[] = [
     description: 'When dusk settles, the bamboo forest empties. Warm amber lanterns illuminate the towering emerald stalks as the evening breeze rustles softly above.',
     atmosphere: 'Meditative, Ethereal, Poetic',
     bestTime: 'November during autumn leaves',
-    image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=80'
+    image: '/download (58).jpg'
   },
   {
     id: 'amalfi-terrace',
@@ -89,7 +94,7 @@ export const PLACES_TO_EXPLORE: Place[] = [
     description: 'Overhanging the Tyrrhenian Sea, this quiet garden feels floating in the clouds. Perfect for sharing wine while distant church bells ring across the valley.',
     atmosphere: 'Timeless, Warm, Elegant',
     bestTime: 'May & September at Golden Hour',
-    image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1000&q=80'
+    image: '/703476404338919012.jpg'
   },
   {
     id: 'tromso-aurora-cabin',
@@ -99,7 +104,7 @@ export const PLACES_TO_EXPLORE: Place[] = [
     description: 'A secluded glass cabin perched along the Lyngen Alps. From your heated featherbed, watch green ribbons of solar light dance across polar mountain peaks.',
     atmosphere: 'Intimate, Wonder, Cosmic',
     bestTime: 'December – February under New Moons',
-    image: 'https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&w=1000&q=80'
+    image: '/1101552390136306348.jpg'
   }
 ];
 
@@ -113,7 +118,7 @@ export const COUPLE_STORIES: CoupleStory[] = [
     excerpt: 'We drove for six hours in complete silence without turning the radio on once. Not because we were angry, but because the silence between us was full of warmth.',
     fullStory: 'We stood on the cliff just as the morning sun burst over the edge of the planet. Looking down at the endless clouds illuminated in fire and gold, David looked at me and said: "No matter how big the cosmos feels, having your hand in mine makes it feel like home."',
     quote: '"Having your hand in mine makes the cosmos feel like home."',
-    image: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=80'
+    image: '/download (57).jpg'
   },
   {
     id: 'story-2',
@@ -124,7 +129,7 @@ export const COUPLE_STORIES: CoupleStory[] = [
     excerpt: 'We bought a cheap bottle of Bordeaux, turned off our phones, and printed out Arthur Aron’s 36 questions that lead to intimacy.',
     fullStory: 'We ended up talking until 4:45 AM. Question 28 asked: "When did you last cry in front of another person?" That was the night we stopped being two people dating and became each other’s safe harbor.',
     quote: '"That night we stopped being two people dating and became each other’s safe harbor."',
-    image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80'
+    image: '/703476404338919012.jpg'
   },
   {
     id: 'story-3',
@@ -135,7 +140,7 @@ export const COUPLE_STORIES: CoupleStory[] = [
     excerpt: 'On our first anniversary, we decided that instead of exchanging expensive presents, we would gift each other sunrises in remote places.',
     fullStory: 'Each sunrise has its own memory. One was spent shivering under a shared tarp in driving drizzle. Another was an explosion of peach-colored light over Lake Toya. Experiences are the only wealth that never fades.',
     quote: '"Experiences are the only wealth that never fades."',
-    image: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=800&q=80'
+    image: '/download (58).jpg'
   }
 ];
 

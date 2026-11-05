@@ -31,20 +31,13 @@ export const App: React.FC = () => {
   useEffect(() => {
     const handleHash = () => {
       const hash = window.location.hash.replace('#', '');
-      if (hash === 'date-ideas' || hash === 'discover') {
+      setIsDiscoverOpen(hash === 'date-ideas' || hash === 'discover');
+      setIsPlacesOpen(hash === 'places');
+      setIsStoriesOpen(hash === 'stories');
+      setIsOurSpaceOpen(hash === 'our-space');
+      setIsWatchStoryOpen(hash === 'watch-story');
+      if (['date-ideas', 'discover', 'places', 'stories', 'our-space'].includes(hash)) {
         setActiveTab(hash as ActiveTab);
-        setIsDiscoverOpen(true);
-      } else if (hash === 'places') {
-        setActiveTab('places');
-        setIsPlacesOpen(true);
-      } else if (hash === 'stories') {
-        setActiveTab('stories');
-        setIsStoriesOpen(true);
-      } else if (hash === 'our-space') {
-        setActiveTab('our-space');
-        setIsOurSpaceOpen(true);
-      } else if (hash === 'watch-story') {
-        setIsWatchStoryOpen(true);
       }
     };
 
@@ -56,19 +49,12 @@ export const App: React.FC = () => {
   // Update hash when modal opens/closes
   const handleSelectTab = (tab: ActiveTab) => {
     setActiveTab(tab);
-    if (tab === 'discover' || tab === 'date-ideas') {
-      setIsDiscoverOpen(true);
-      window.location.hash = tab;
-    } else if (tab === 'places') {
-      setIsPlacesOpen(true);
-      window.location.hash = 'places';
-    } else if (tab === 'stories') {
-      setIsStoriesOpen(true);
-      window.location.hash = 'stories';
-    } else if (tab === 'our-space') {
-      setIsOurSpaceOpen(true);
-      window.location.hash = 'our-space';
-    }
+    setIsDiscoverOpen(tab === 'discover' || tab === 'date-ideas');
+    setIsPlacesOpen(tab === 'places');
+    setIsStoriesOpen(tab === 'stories');
+    setIsOurSpaceOpen(tab === 'our-space');
+    setIsWatchStoryOpen(false);
+    window.location.hash = tab;
   };
 
   const handleCloseAll = () => {
@@ -82,16 +68,28 @@ export const App: React.FC = () => {
 
   const handleStartExploring = () => {
     setActiveTab('discover');
+    setIsPlacesOpen(false);
+    setIsStoriesOpen(false);
+    setIsOurSpaceOpen(false);
+    setIsWatchStoryOpen(false);
     setIsDiscoverOpen(true);
     window.location.hash = 'discover';
   };
 
   const handleWatchStory = () => {
+    setIsDiscoverOpen(false);
+    setIsPlacesOpen(false);
+    setIsStoriesOpen(false);
+    setIsOurSpaceOpen(false);
     setIsWatchStoryOpen(true);
     window.location.hash = 'watch-story';
   };
 
   const handleOpenOurSpace = () => {
+    setIsDiscoverOpen(false);
+    setIsPlacesOpen(false);
+    setIsStoriesOpen(false);
+    setIsWatchStoryOpen(false);
     setIsOurSpaceOpen(true);
     window.location.hash = 'our-space';
   };

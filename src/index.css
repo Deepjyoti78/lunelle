@@ -64,6 +64,60 @@
   color: #FFFFFF;
 }
 
+/* Custom smooth animations */
+@keyframes modalZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes backdropFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cardFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.animate-modalZoomIn {
+  animation: modalZoomIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-backdropFade {
+  animation: backdropFade 0.25s ease-out forwards;
+}
+
+.animate-cardFadeUp {
+  animation: cardFadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
 /* Glass Chip for Bottom Navigation */
 .glass-chip {
   background: rgba(245, 229, 210, 0.06);
@@ -71,12 +125,18 @@
   -webkit-backdrop-filter: blur(12px) saturate(130%);
   border: 1px solid rgba(245, 229, 210, 0.22);
   box-shadow: none;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-chip:hover {
   background: rgba(245, 229, 210, 0.16);
   border-color: rgba(245, 229, 210, 0.42);
-  box-shadow: 0 0 20px rgba(216, 139, 85, 0.22);
+  box-shadow: 0 0 22px rgba(216, 139, 85, 0.25);
+  transform: translateY(-2px);
+}
+
+.glass-chip:active {
+  transform: scale(0.97) translateY(0);
 }
 
 /* Custom scrollbars */
