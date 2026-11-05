@@ -66,17 +66,17 @@
 
 /* Glass Chip for Bottom Navigation */
 .glass-chip {
-  background: rgba(22, 16, 12, 0.52);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border: 1px solid rgba(245, 229, 210, 0.16);
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.08);
+  background: rgba(245, 229, 210, 0.06);
+  backdrop-filter: blur(12px) saturate(130%);
+  -webkit-backdrop-filter: blur(12px) saturate(130%);
+  border: 1px solid rgba(245, 229, 210, 0.22);
+  box-shadow: none;
 }
 
 .glass-chip:hover {
-  background: rgba(36, 26, 20, 0.70);
-  border-color: rgba(245, 229, 210, 0.32);
-  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.5), inset 0 1px 1px 0 rgba(255, 255, 255, 0.15), 0 0 16px rgba(216, 139, 85, 0.15);
+  background: rgba(245, 229, 210, 0.16);
+  border-color: rgba(245, 229, 210, 0.42);
+  box-shadow: 0 0 20px rgba(216, 139, 85, 0.22);
 }
 
 /* Custom scrollbars */

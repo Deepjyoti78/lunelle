@@ -56,8 +56,8 @@ export const Hero: React.FC<HeroProps> = ({
         />
         {/* Top subtle fade for header */}
         <div className="absolute top-0 inset-x-0 h-28 bg-gradient-to-b from-[#100D0B]/55 via-[#100D0B]/20 to-transparent pointer-events-none" />
-        {/* Bottom subtle fade for chips */}
-        <div className="absolute bottom-0 inset-x-0 h-36 bg-gradient-to-t from-[#100D0B]/70 via-[#100D0B]/20 to-transparent pointer-events-none" />
+        {/* Bottom subtle atmospheric fade */}
+        <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#100D0B]/25 to-transparent pointer-events-none" />
       </div>
 
       {/* Main Foreground Container */}
