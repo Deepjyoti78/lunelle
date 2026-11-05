@@ -73,18 +73,18 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
           </div>
 
-          {/* Heading: Explore, plan, and / collect moments together. (Matching Image 2 editorial serif design) */}
-          <h1 className="text-[36px] xs:text-[42px] sm:text-[50px] md:text-[56px] lg:text-[62px] font-cormorant font-medium text-[#F5E5D2] leading-[1.08] tracking-[-0.01em] mb-4 sm:mb-5">
+          {/* Heading: Explore, plan, and / collect moments together. (Restrained, elegant, editorial) */}
+          <h1 className="text-[28px] xs:text-[32px] sm:text-[38px] md:text-[42px] lg:text-[45px] font-cormorant font-medium text-[#F5E5D2] leading-[1.12] tracking-[-0.01em] mb-3.5 sm:mb-4.5">
             Explore, plan, and
             <br />
             collect moments{' '}
-            <span className="font-romantic italic font-normal text-[46px] xs:text-[54px] sm:text-[64px] md:text-[70px] lg:text-[76px] text-[#F5E5D2] leading-none inline-block ml-0.5 sm:ml-1 align-baseline">
+            <span className="font-romantic italic font-normal text-[34px] xs:text-[40px] sm:text-[46px] md:text-[50px] lg:text-[54px] text-[#F5E5D2] leading-none inline-block ml-0.5 sm:ml-1 align-baseline">
               together.
             </span>
           </h1>
 
           {/* Description */}
-          <p className="text-[14px] sm:text-[15.5px] md:text-[16px] text-[#C4B5A5] font-sans font-normal leading-[1.62] sm:leading-[1.68] max-w-[490px] mb-6 sm:mb-9">
+          <p className="text-[13.5px] sm:text-[14.5px] md:text-[15px] text-[#C4B5A5] font-sans font-normal leading-[1.6] sm:leading-[1.65] max-w-[460px] mb-6 sm:mb-8">
             Discover date ideas, beautiful places, and experiences
             <br className="hidden xs:inline" />
             {' '}made for two.
