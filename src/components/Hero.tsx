@@ -27,7 +27,7 @@ export const Hero: React.FC<HeroProps> = ({
       */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <img
-          src="/hero-bg.jpg"
+          src="/a_cinematic_wide_landscape_image_16_9_of_the_sam.png"
           alt="Original Earth horizon sunrise with couple standing on cliff"
           className="w-full h-full object-cover object-[82%_center] sm:object-[72%_center] lg:object-center"
           loading="eager"

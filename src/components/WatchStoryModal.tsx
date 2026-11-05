@@ -85,7 +85,7 @@ export const WatchStoryModal: React.FC<WatchStoryModalProps> = ({
           {/* Background Image with slow cinematic zoom */}
           <div className="absolute inset-0 z-0">
             <img
-              src="/hero-bg.jpg"
+              src="/a_cinematic_wide_landscape_image_16_9_of_the_sam.png"
               alt="Cinematic background"
               className="w-full h-full object-cover scale-105 animate-pulse duration-[12000ms]"
             />
