@@ -119,8 +119,8 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
         </div>
 
-        {/* Bottom Feature Navigation */}
-        <div className="pt-3 sm:pt-4">
+        {/* Bottom Feature Navigation - Lifted up with comfortable breathing room */}
+        <div className="mb-4 sm:mb-7 lg:mb-10 pt-1">
           <BottomChips
             onSelectFeature={onSelectFeature}
             onOpenOurSpace={onOpenOurSpace}
